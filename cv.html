@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Yassine Ait Mohamed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.8;
+            color: #003366;
+            background-color: #f5f5dc;
+            font-size: 18px;
+            padding: 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 40px 20px 40px;
+            background-color: #f5f5dc;
+            border-bottom: 2px solid #d4d4b8;
+            margin-bottom: 50px;
+            gap: 40px;
+            position: relative;
+        }
+
+        .nav-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #24292e;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #003366;
+            font-weight: 500;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #dc3545;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            background-color: #ebe8d8;
+            border: 2px solid #d4d4b8;
+            border-radius: 25px;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #003366;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .theme-toggle:hover {
+            background-color: #dc3545;
+            color: white;
+            border-color: #dc3545;
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode nav {
+            background-color: #1a1a1a;
+            border-bottom-color: #333;
+        }
+
+        body.dark-mode .nav-name {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .nav-links a {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .nav-links a:hover {
+            color: #dc3545;
+        }
+
+        body.dark-mode .theme-toggle {
+            background-color: #2a2a2a;
+            border-color: #444;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .theme-toggle:hover {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        body.dark-mode h1,
+        body.dark-mode h2,
+        body.dark-mode .institution,
+        body.dark-mode .review-date {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .position,
+        body.dark-mode .dates,
+        body.dark-mode .review-journal {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode a {
+            color: #dc3545;
+        }
+        
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        h1 {
+            font-size: 42px;
+            margin-bottom: 35px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #dc3545;
+            color: #24292e;
+            font-weight: 600;
+        }
+        
+        h2 {
+            font-size: 32px;
+            margin-top: 45px;
+            margin-bottom: 25px;
+            color: #24292e;
+            font-weight: 600;
+            border-bottom: 2px solid #dc3545;
+            padding-bottom: 10px;
+        }
+        
+        .summary-item {
+            position: relative;
+            margin-bottom: 35px;
+            padding-left: 35px;
+        }
+        
+        .summary-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 16px;
+            height: 16px;
+            background-color: #dc3545;
+            border-radius: 50%;
+        }
+        
+        .institution {
+            font-weight: bold;
+            color: #24292e;
+            font-size: 22px;
+        }
+        
+        .position {
+            color: #003366;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+        
+        .dates {
+            color: #003366;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+        
+        /* Review Activities */
+        .review-item {
+            position: relative;
+            margin-bottom: 35px;
+            padding-left: 35px;
+        }
+        
+        .review-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 16px;
+            height: 16px;
+            background-color: #dc3545;
+            border-radius: 50%;
+        }
+        
+        .review-date {
+            font-weight: bold;
+            color: #24292e;
+            font-size: 22px;
+        }
+        
+        .review-journal {
+            color: #003366;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+        
+        a {
+            color: #dc3545;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                padding: 60px 20px 20px 20px;
+            }
+
+            .theme-toggle {
+                top: 10px;
+                right: 20px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                justify-content: center;
+            }
+            
+            .container {
+                padding: 0 20px;
+            }
+            
+            h1 {
+                font-size: 34px;
+            }
+            
+            h2 {
+                font-size: 28px;
+            }
+            
+            .institution, .review-date {
+                font-size: 20px;
+            }
+            
+            .position, .dates, .review-journal {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon" id="theme-icon"></i>
+            <span id="theme-text">Dark Mode</span>
+        </button>
+        <div class="nav-name">Yassine Ait Mohamed</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="talks.html">Talks</a>
+            <a href="cv.html">CV</a>
+            <a href="teaching.html">Teaching</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>CV</h1>
+        
+        <h2>Summary</h2>
+        <div class="summary">
+            <div class="summary-item">
+                <p><span class="institution">University of Sherbrooke:</span> <span class="position">PhD Student in Mathematics</span> <span class="dates">(2024—Today)</span></p>
+            </div>
+            <div class="summary-item">
+                <p><span class="institution">University of Sidi Mohamed Ben Abdellah:</span> <span class="position">PhD Student in Mathematics</span> <span class="dates">(2022—2023)</span></p>
+            </div>
+            <div class="summary-item">
+                <p><span class="institution">University of Sidi Mohamed Ben Abdellah:</span> <span class="position">Master's degree in Mathematics</span> <span class="dates">(2020—2022)</span></p>
+            </div>
+            <div class="summary-item">
+                <p><span class="institution">University of Moulay Ismail:</span> <span class="position">Bachelor's degree in Mathematics</span> <span class="dates">(2016—2020)</span></p>
+            </div>
+        </div>
+
+       <h2>Peer Review Activities</h2>
+<div class="review-activities">
+    <div class="review-item">
+        <p><span class="review-date">August 2025:</span> <span class="review-journal">Peer Reviewer, Proceedings of the International Geometry Center</span></p>
+    </div>
+    <div class="review-item">
+        <p><span class="review-date">June 2025:</span> <span class="review-journal">Peer Reviewer, International Journal of Neutrosophic Science</span></p>
+    </div>
+    <div class="review-item">
+        <p><span class="review-date">February 2025:</span> <span class="review-journal">Peer Reviewer, Asian Research Journal of Mathematics</span></p>
+    </div>
+</div>
+        <h2>Full CV</h2>
+        <p><a href="cv.pdf">[PDF]</a></p>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+            
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                themeIcon.className = 'fas fa-sun';
+                themeText.textContent = 'Light Mode';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.className = 'fas fa-moon';
+                themeText.textContent = 'Dark Mode';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Load saved theme on page load
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+            
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                themeIcon.className = 'fas fa-sun';
+                themeText.textContent = 'Light Mode';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Yassine Ait Mohamed - PhD Student in Mathematics | University of Sherbrooke</title>
+    <meta name="description" content="Yassine Ait Mohamed, PhD student in Mathematics at University of Sherbrooke. Research in differential geometry, Poisson structures, shifted symplectic geometry, and algebraic geometry under supervision of Prof. Maxence Mayrand.">
+    <meta name="keywords" content="Yassine Ait Mohamed, mathematics, PhD student, differential geometry, Poisson geometry, shifted symplectic geometry, algebraic geometry, Lie groups, TQFT, University of Sherbrooke, Maxence Mayrand">
+    <meta name="author" content="Yassine Ait Mohamed">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Yassine Ait Mohamed - PhD Student in Mathematics">
+    <meta property="og:description" content="Research in differential geometry, Poisson structures, and shifted symplectic geometry at University of Sherbrooke">
+    <meta property="og:url" content="https://yassineaitmohamed.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yassineaitmohamed.github.io/photo.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Yassine Ait Mohamed - PhD Student in Mathematics">
+    <meta name="twitter:description" content="Research in differential geometry, Poisson structures, and shifted symplectic geometry">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yassineaitmohamed.github.io/">
+    
+    <!-- Schema.org structured data for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Yassine Ait Mohamed",
+      "url": "https://yassineaitmohamed.github.io/",
+      "image": "https://yassineaitmohamed.github.io/photo.jpg",
+      "jobTitle": "PhD Student in Mathematics",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "University of Sherbrooke"
+      },
+      "alumniOf": "University of Sidi Mohamed Ben Abdellah",
+      "email": "yassine.ait.mohamed@usherbrooke.ca",
+      "sameAs": [
+        "https://github.com/yassineaitmohamed"
+      ],
+      "knowsAbout": [
+        "Differential Geometry",
+        "Poisson Geometry",
+        "Shifted Symplectic Geometry",
+        "Algebraic Geometry",
+        "Lie Groups",
+        "Topological Quantum Field Theories"
+      ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.8;
+            color: #003366;
+            background-color: #f5f5dc;
+            padding: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 40px 20px 40px;
+            background-color: #f5f5dc;
+            border-bottom: 2px solid #d4d4b8;
+            margin-bottom: 50px;
+            position: relative;
+            gap: 40px;
+        }
+
+        .nav-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #24292e;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            list-style: none;
+            align-items: center;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            background-color: #ebe8d8;
+            border: 2px solid #d4d4b8;
+            border-radius: 25px;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #003366;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .theme-toggle:hover {
+            background-color: #dc3545;
+            color: white;
+            border-color: #dc3545;
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode nav {
+            background-color: #1a1a1a;
+            border-bottom-color: #333;
+        }
+
+        body.dark-mode .nav-name {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .nav-links a {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .nav-links a:hover {
+            color: #dc3545;
+        }
+
+        body.dark-mode .theme-toggle {
+            background-color: #2a2a2a;
+            border-color: #444;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .theme-toggle:hover {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        body.dark-mode .intro-text,
+        body.dark-mode .affiliation {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode h2 {
+            color: #e0e0e0;
+            border-bottom-color: #dc3545;
+        }
+
+        body.dark-mode .content a {
+            color: #dc3545;
+        }
+
+        body.dark-mode .social-links a {
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+            border: 1px solid #444;
+        }
+
+        body.dark-mode .social-links a:hover {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        body.dark-mode .contact-info {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode .contact-info strong {
+            color: #e0e0e0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #003366;
+            font-weight: 500;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #dc3545;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 60px;
+            padding: 0 20px;
+        }
+
+        /* Content Section */
+        .content {
+            grid-column: 1 / 2;
+        }
+
+        .intro-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #24292e;
+            margin-bottom: 20px;
+        }
+
+        .intro-text {
+            font-size: 20px;
+            color: #003366;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .affiliation {
+            font-size: 20px;
+            color: #003366;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        /* Photo Section */
+        .photo-section {
+            grid-column: 2 / 3;
+            position: sticky;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .profile-photo {
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            border-radius: 8px;
+            background-color: #ebe8d8;
+            color: #003366;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 18px;
+            width: 100%;
+        }
+
+        .social-links a i {
+            width: 24px;
+            text-align: center;
+            font-size: 18px;
+            color: #dc3545;
+        }
+
+        .social-links a:hover {
+            background-color: #dc3545;
+            color: white;
+            transform: translateX(5px);
+            text-decoration: none;
+        }
+
+        .social-links a:hover i {
+            color: white;
+        }
+
+        .social-links .info-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 12px;
+            font-size: 16px;
+            color: #003366;
+        }
+
+        .social-links .info-item i {
+            width: 24px;
+            text-align: center;
+            font-size: 16px;
+            color: #dc3545;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #003366;
+            line-height: 1.6;
+        }
+
+        .contact-info strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #24292e;
+            font-weight: 600;
+        }
+
+        .contact-info a {
+            color: #dc3545;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Titles */
+        h2 {
+            font-size: 28px;
+            color: #24292e;
+            margin-bottom: 20px;
+            margin-top: 40px;
+            font-weight: 600;
+            border-bottom: 2px solid #dc3545;
+            padding-bottom: 10px;
+        }
+
+        /* Links in content */
+        .content a {
+            color: #dc3545;
+            text-decoration: none;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                padding: 60px 20px 20px 20px;
+            }
+
+            .theme-toggle {
+                top: 10px;
+                right: 20px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                justify-content: center;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .photo-section {
+                position: static;
+                order: -1;
+            }
+
+            .content {
+                grid-column: 1 / -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+            <i class="fas fa-moon" id="theme-icon"></i>
+            <span id="theme-text">Dark Mode</span>
+        </button>
+        <div class="nav-name">Yassine Ait Mohamed</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="talks.html">Talks</a>
+            <a href="cv.html">CV</a>
+            <a href="teaching.html">Teaching</a>
+        </div>
+    </nav>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+            
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                themeIcon.className = 'fas fa-sun';
+                themeText.textContent = 'Light Mode';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.className = 'fas fa-moon';
+                themeText.textContent = 'Dark Mode';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Load saved theme on page load
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+            
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                themeIcon.className = 'fas fa-sun';
+                themeText.textContent = 'Light Mode';
+            }
+        });
+    </script>
+
+    <div class="container">
+        <div class="content">
+            <h1 class="intro-title">About Me</h1>
+            <div class="intro-text">
+                I am a PhD student in Mathematics at the University of Sherbrooke, under the supervision of 
+                <a href="https://maxencemayrand.github.io/" target="_blank" rel="noopener">Maxence Mayrand</a>.
+                Before that, I was a PhD student at the University of Sidi Mohamed Ben Abdellah, supervised by 
+                <a href="https://scholar.google.com/citations?hl=fr&user=D2ZlnJIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Lahcen Oukhtite</a>.
+            </div>
+
+            <h2>Research Interests</h2>
+            <p class="intro-text">
+                Derivations theory, Algebraic geometry, Lie groups, topological quantum field theories, shifted symplectic geometry, Poisson geometry
+            </p>
+
+            <h2>Contact</h2>
+            <p class="intro-text">
+                <a href="mailto:yassine.ait.mohamed@usherbrooke.ca">yassine.ait.mohamed@usherbrooke.ca</a>
+            </p>
+        </div>
+
+        <div class="photo-section">
+            <img src="photo.jpg" alt="Yassine Ait Mohamed - PhD Student in Mathematics" class="profile-photo">
+            
+            <div class="social-links">
+                <a href="https://github.com/yassineaitmohamed" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
