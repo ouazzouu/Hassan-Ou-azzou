@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talks - Yassine Ait Mohamed</title>
+    <title>Talks - Hassan Ou-azzou</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: 'Courier New', Courier, monospace;
             line-height: 1.8;
@@ -20,8 +16,7 @@
             font-size: 18px;
             padding: 20px;
         }
-        
-        /* Navigation */
+
         nav {
             display: flex;
             justify-content: center;
@@ -34,212 +29,88 @@
             position: relative;
         }
 
-        .nav-name {
-            font-size: 28px;
-            font-weight: 700;
-            color: #24292e;
-            white-space: nowrap;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            flex-wrap: wrap;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #003366;
-            font-weight: 500;
-            font-size: 20px;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #dc3545;
-        }
+        .nav-name { font-size: 28px; font-weight: 700; color: #24292e; white-space: nowrap; }
+        .nav-links { display: flex; gap: 40px; flex-wrap: wrap; list-style: none; align-items: center; }
+        .nav-links a { text-decoration: none; color: #003366; font-weight: 500; font-size: 20px; transition: color 0.3s; }
+        .nav-links a:hover { color: #dc3545; }
 
         .theme-toggle {
-            position: absolute;
-            top: 20px;
-            right: 40px;
-            background-color: #ebe8d8;
-            border: 2px solid #d4d4b8;
-            border-radius: 25px;
-            padding: 8px 16px;
-            cursor: pointer;
-            font-size: 16px;
-            color: #003366;
-            font-weight: 500;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            position: absolute; top: 20px; right: 40px;
+            background-color: #ebe8d8; border: 2px solid #d4d4b8;
+            border-radius: 25px; padding: 8px 16px; cursor: pointer;
+            font-size: 16px; color: #003366; font-weight: 500;
+            transition: all 0.3s; display: flex; align-items: center; gap: 8px;
         }
+        .theme-toggle:hover { background-color: #dc3545; color: white; border-color: #dc3545; }
 
-        .theme-toggle:hover {
-            background-color: #dc3545;
-            color: white;
-            border-color: #dc3545;
-        }
+        /* Dark mode */
+        body.dark-mode { background-color: #1a1a1a; color: #e0e0e0; }
+        body.dark-mode nav { background-color: #1a1a1a; border-bottom-color: #333; }
+        body.dark-mode .nav-name { color: #e0e0e0; }
+        body.dark-mode .nav-links a { color: #e0e0e0; }
+        body.dark-mode .nav-links a:hover { color: #dc3545; }
+        body.dark-mode .theme-toggle { background-color: #2a2a2a; border-color: #444; color: #e0e0e0; }
+        body.dark-mode .theme-toggle:hover { background-color: #dc3545; color: white; }
+        body.dark-mode h1 { color: #e0e0e0; }
+        body.dark-mode .year-label { color: #dc3545; }
+        body.dark-mode .talk p { color: #b0b0b0; }
 
-        /* Dark mode styles */
-        body.dark-mode {
-            background-color: #1a1a1a;
-            color: #e0e0e0;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 
-        body.dark-mode nav {
-            background-color: #1a1a1a;
-            border-bottom-color: #333;
-        }
-
-        body.dark-mode .nav-name {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .nav-links a {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .nav-links a:hover {
-            color: #dc3545;
-        }
-
-        body.dark-mode .theme-toggle {
-            background-color: #2a2a2a;
-            border-color: #444;
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .theme-toggle:hover {
-            background-color: #dc3545;
-            color: white;
-        }
-
-        body.dark-mode h1 {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .date {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .talk p {
-            color: #b0b0b0;
-        }
-
-        body.dark-mode .pdf-link {
-            color: #dc3545;
-        }
-        
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-        
         h1 {
-            font-size: 42px;
-            margin-bottom: 35px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #dc3545;
-            color: #24292e;
-            font-weight: 600;
+            font-size: 42px; margin-bottom: 35px;
+            padding-bottom: 12px; border-bottom: 2px solid #dc3545;
+            color: #24292e; font-weight: 600;
         }
-        
+
+        .year-label {
+            font-size: 24px; font-weight: 700;
+            color: #24292e; margin: 35px 0 15px 0;
+        }
+
         .talk {
             position: relative;
-            margin-bottom: 35px;
+            margin-bottom: 28px;
             padding-left: 35px;
         }
-        
+
         .talk::before {
             content: '';
             position: absolute;
-            left: 0;
-            top: 12px;
-            width: 16px;
-            height: 16px;
+            left: 0; top: 12px;
+            width: 14px; height: 14px;
             background-color: #dc3545;
             border-radius: 50%;
         }
-        
-        .date {
-            font-weight: bold;
-            color: #24292e;
-            font-size: 22px;
+
+        .talk p { font-size: 19px; color: #003366; line-height: 1.8; }
+
+        .talk .venue {
+            font-style: italic;
+            color: #555;
+            font-size: 17px;
         }
-        
-        .talk p {
-            font-size: 20px;
-            color: #003366;
-            line-height: 1.8;
-        }
-        
-        .pdf-link {
-            color: #dc3545;
-            text-decoration: none;
-            margin-left: 10px;
-            font-size: 20px;
-            font-weight: 500;
-        }
-        
-        .pdf-link:hover {
-            text-decoration: underline;
-        }
-        
-        /* Responsive */
+
+        .talk a { color: #dc3545; text-decoration: none; font-size: 18px; }
+        .talk a:hover { text-decoration: underline; }
+
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 15px;
-                padding: 60px 20px 20px 20px;
-            }
-
-            .theme-toggle {
-                top: 10px;
-                right: 20px;
-            }
-
-            .nav-links {
-                gap: 15px;
-                justify-content: center;
-            }
-            
-            .container {
-                padding: 0 20px;
-            }
-            
-            h1 {
-                font-size: 34px;
-            }
-            
-            .date {
-                font-size: 20px;
-            }
-            
-            .talk p {
-                font-size: 18px;
-            }
-            
-            .pdf-link {
-                font-size: 18px;
-            }
+            nav { flex-direction: column; gap: 15px; padding: 60px 20px 20px 20px; }
+            .theme-toggle { top: 10px; right: 20px; }
+            .nav-links { gap: 15px; justify-content: center; }
+            .container { padding: 0 20px; }
+            h1 { font-size: 34px; }
+            .talk p { font-size: 17px; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <button class="theme-toggle" onclick="toggleTheme()">
             <i class="fas fa-moon" id="theme-icon"></i>
             <span id="theme-text">Dark Mode</span>
         </button>
-        <div class="nav-name">Yassine Ait Mohamed</div>
+        <div class="nav-name">Hassan Ou-azzou</div>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="research.html">Research</a>
@@ -249,45 +120,81 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <div class="container">
-        <h1>Talks</h1>
+        <h1>Talks &amp; Presentations</h1>
+
+        <div class="year-label">2025</div>
 
         <div class="talk">
-            <p><span class="date">November 2025:</span> Poisson structures on 1-shifted coisotropics, Séminaire SAG, Université de Sherbrooke[<a href="Documents talks/ppt2025.pdf" class="pdf-link">PDF</a>]</p>
+            <p>On rank equivalence of skew polycyclic codes over finite fields</p>
+            <p class="venue">ICMM-ANTA25, 20–22 November 2025, Fes, Morocco —
+                <a href="https://ens.usmba.ac.ma/Colloque-International/20-22-NOV-2025/" target="_blank" rel="noopener">[Link]</a>
+            </p>
         </div>
-        
+
         <div class="talk">
-            <p><span class="date">November 2024:</span> On bound quivers, MAT728 Selected Topics in Algebra, Université de Sherbrooke [<a href="Documents talks/quivers.pdf" class="pdf-link">PDF</a>]</p>
+            <p>Bounds and equivalence of skew polycyclic codes over finite fields</p>
+            <p class="venue">NCRA IX, 30 June–3 July 2025, France —
+                <a href="http://leroy.perso.math.cnrs.fr" target="_blank" rel="noopener">[Link]</a>
+            </p>
         </div>
-        
+
         <div class="talk">
-            <p><span class="date">July 2023:</span> Generalized homogeneous derivations in graded rings, Seminar of Commutative Algebra, Laboratory of Modeling and Mathematical Structures, Faculty of Science and Technology, Fez</p>
+            <p>Equivalence of Skew Polycyclic codes over finite fields (Part 2)</p>
+            <p class="venue">19 March 2025, Neuchâtel–St.Gallen–Zurich Seminar in Coding Theory and Cryptography, University of Zürich, Switzerland —
+                <a href="https://www.math.uzh.ch/aa/events" target="_blank" rel="noopener">[Link]</a>
+            </p>
         </div>
-        
+
         <div class="talk">
-            <p><span class="date">April 2023:</span> On Graded Rings with homogeneous derivations, Seminar of Commutative Algebra, Laboratory of Modeling and Mathematical Structures, Faculty of Science and Technology, Fez</p>
+            <p>Equivalence of Polycyclic codes over finite fields (Part 1)</p>
+            <p class="venue">19 February 2025, Neuchâtel–St.Gallen–Zurich Seminar in Coding Theory and Cryptography, University of Zürich, Switzerland —
+                <a href="https://www.math.uzh.ch/aa/events" target="_blank" rel="noopener">[Link]</a>
+            </p>
         </div>
-        
+
+        <div class="year-label">2024</div>
+
         <div class="talk">
-            <p><span class="date">February 2023:</span> On Graded Rings and derivations, Seminar of Commutative Algebra, Laboratory of Modeling and Mathematical Structures, Faculty of Science and Technology, Fez</p>
+            <p>Structure of skew (M, σ, δ)-codes</p>
+            <p class="venue">10 September 2024, Institute of Computer Sciences, University of St. Gallen, Switzerland</p>
         </div>
-        
+
+        <div class="year-label">2023</div>
+
         <div class="talk">
-            <p><span class="date">January 2023:</span> On Graded Rings, Seminar of Commutative Algebra, Laboratory of Modeling and Mathematical Structures, Faculty of Science and Technology, Fez [<a href="Documents talks/graded_rings.pdf" class="pdf-link">PDF</a>]</p>
+            <p>On linear codes invariant under cyclic endomorphisms</p>
+            <p class="venue">NCRA VIII, 28–31 August 2023, France —
+                <a href="http://leroy.perso.math.cnrs.fr" target="_blank" rel="noopener">[Link]</a>
+            </p>
         </div>
-        
+
+        <div class="year-label">2022</div>
+
         <div class="talk">
-            <p><span class="date">December 2021:</span> Tensor Algebra and Enveloping Algebra of a Lie Algebra, Seminar of Geometry and Algebra, Faculty of Science, Dhar El Mahraz</p>
+            <p>A class of 1-generator right quasi-polycyclic codes</p>
+            <p class="venue">2nd International Conference on Innovative Research in Applied Science, Engineering and Technology (IRASET'2022), 3–4 March 2022, Faculty of Sciences, Moulay Ismail University, Meknes, Morocco</p>
         </div>
-        
+
         <div class="talk">
-            <p><span class="date">November 2021:</span> On Riemann-Roch Theorem, Seminar of Geometry and Algebra, Faculty of Science, Dhar El Mahraz [<a href="Documents talks/roch.pdf" class="pdf-link">PDF</a>]</p>
+            <p>On the algebraic structure of skew cyclic codes with derivation</p>
+            <p class="venue">2nd International Congress on Pure and Applied Sciences, 6–10 June 2022, Faculty of Sciences, Moulay Ismail University, Meknes, Morocco</p>
         </div>
-        
+
+        <div class="year-label">2021</div>
+
         <div class="talk">
-            <p><span class="date">February 2021:</span> Action of a Lie Group on a Smooth Manifold, Seminar of Geometry and Algebra, Faculty of Science, Dhar El Mahraz</p>
+            <p>On right polycyclic codes</p>
+            <p class="venue">The Three Days of Differential Geometry, 3–5 November 2021, Faculty of Sciences, Moulay Ismail University, Meknes, Morocco</p>
         </div>
+
+        <!-- Conferences organised -->
+        <h1 style="margin-top:60px; font-size:32px;">Conference Organisation</h1>
+
+        <div class="talk">
+            <p>Co-organiser of <em>Algebra and its Applications</em>, 28–30 December 2023, National School of Arts and Crafts, Moulay Ismail University, Meknes, Morocco.</p>
+        </div>
+
     </div>
 
     <script>
@@ -295,9 +202,7 @@
             const body = document.body;
             const themeIcon = document.getElementById('theme-icon');
             const themeText = document.getElementById('theme-text');
-            
             body.classList.toggle('dark-mode');
-            
             if (body.classList.contains('dark-mode')) {
                 themeIcon.className = 'fas fa-sun';
                 themeText.textContent = 'Light Mode';
@@ -308,17 +213,12 @@
                 localStorage.setItem('theme', 'light');
             }
         }
-
-        // Load saved theme on page load
-        window.addEventListener('DOMContentLoaded', (event) => {
+        window.addEventListener('DOMContentLoaded', () => {
             const savedTheme = localStorage.getItem('theme');
-            const themeIcon = document.getElementById('theme-icon');
-            const themeText = document.getElementById('theme-text');
-            
             if (savedTheme === 'dark') {
                 document.body.classList.add('dark-mode');
-                themeIcon.className = 'fas fa-sun';
-                themeText.textContent = 'Light Mode';
+                document.getElementById('theme-icon').className = 'fas fa-sun';
+                document.getElementById('theme-text').textContent = 'Light Mode';
             }
         });
     </script>

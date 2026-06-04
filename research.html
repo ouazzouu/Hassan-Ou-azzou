@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - Yassine Ait Mohamed</title>
+    <title>Research - Hassan Ou-azzou</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Courier New', Courier, monospace;
@@ -21,7 +17,6 @@
             padding: 20px;
         }
 
-        /* Navigation */
         nav {
             display: flex;
             justify-content: center;
@@ -34,327 +29,107 @@
             position: relative;
         }
 
-        .nav-name {
-            font-size: 28px;
-            font-weight: 700;
-            color: #24292e;
-            white-space: nowrap;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            flex-wrap: wrap;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #003366;
-            font-weight: 500;
-            font-size: 20px;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #dc3545;
-        }
+        .nav-name { font-size: 28px; font-weight: 700; color: #24292e; white-space: nowrap; }
+        .nav-links { display: flex; gap: 40px; flex-wrap: wrap; list-style: none; align-items: center; }
+        .nav-links a { text-decoration: none; color: #003366; font-weight: 500; font-size: 20px; transition: color 0.3s; }
+        .nav-links a:hover { color: #dc3545; }
 
         .theme-toggle {
-            position: absolute;
-            top: 20px;
-            right: 40px;
-            background-color: #ebe8d8;
-            border: 2px solid #d4d4b8;
-            border-radius: 25px;
-            padding: 8px 16px;
-            cursor: pointer;
-            font-size: 16px;
-            color: #003366;
-            font-weight: 500;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            position: absolute; top: 20px; right: 40px;
+            background-color: #ebe8d8; border: 2px solid #d4d4b8;
+            border-radius: 25px; padding: 8px 16px; cursor: pointer;
+            font-size: 16px; color: #003366; font-weight: 500;
+            transition: all 0.3s; display: flex; align-items: center; gap: 8px;
         }
+        .theme-toggle:hover { background-color: #dc3545; color: white; border-color: #dc3545; }
 
-        .theme-toggle:hover {
-            background-color: #dc3545;
-            color: white;
-            border-color: #dc3545;
-        }
+        /* Dark mode */
+        body.dark-mode { background-color: #1a1a1a; color: #e0e0e0; }
+        body.dark-mode nav { background-color: #1a1a1a; border-bottom-color: #333; }
+        body.dark-mode .nav-name { color: #e0e0e0; }
+        body.dark-mode .nav-links a { color: #e0e0e0; }
+        body.dark-mode .nav-links a:hover { color: #dc3545; }
+        body.dark-mode .theme-toggle { background-color: #2a2a2a; border-color: #444; color: #e0e0e0; }
+        body.dark-mode .theme-toggle:hover { background-color: #dc3545; color: white; }
+        body.dark-mode h1, body.dark-mode h2, body.dark-mode .paper-title { color: #e0e0e0; }
+        body.dark-mode .paper { background-color: #2a2a2a; border-left-color: #dc3545; }
+        body.dark-mode .abstract { background-color: #1a1a1a; border-color: #444; color: #b0b0b0; }
+        body.dark-mode .journal { color: #b0b0b0; }
+        body.dark-mode .paper p { color: #b0b0b0; }
 
-        /* Dark mode styles */
-        body.dark-mode {
-            background-color: #1a1a1a;
-            color: #e0e0e0;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 
-        body.dark-mode nav {
-            background-color: #1a1a1a;
-            border-bottom-color: #333;
-        }
-
-        body.dark-mode .nav-name {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .nav-links a {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .nav-links a:hover {
-            color: #dc3545;
-        }
-
-        body.dark-mode .theme-toggle {
-            background-color: #2a2a2a;
-            border-color: #444;
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .theme-toggle:hover {
-            background-color: #dc3545;
-            color: white;
-        }
-
-        body.dark-mode h1,
-        body.dark-mode h2,
-        body.dark-mode .paper-title {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .research-info {
-            background-color: #2a2a2a;
-            border-left-color: #dc3545;
-        }
-
-        body.dark-mode .research-info h3 {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .research-info p {
-            color: #b0b0b0;
-        }
-
-        body.dark-mode .paper {
-            background-color: #2a2a2a;
-            border-left-color: #dc3545;
-        }
-
-        body.dark-mode .abstract {
-            background-color: #1a1a1a;
-            border-color: #444;
-            color: #b0b0b0;
-        }
-
-        body.dark-mode .journal {
-            color: #b0b0b0;
-        }
-
-        body.dark-mode .paper p {
-            color: #b0b0b0;
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        h1 {
-            font-size: 42px;
-            margin-bottom: 35px;
-            color: #24292e;
-            font-weight: 600;
-        }
+        h1 { font-size: 42px; margin-bottom: 35px; color: #24292e; font-weight: 600; }
 
         h2 {
-            font-size: 28px;
-            margin-top: 45px;
-            margin-bottom: 25px;
-            color: #24292e;
-            font-weight: 600;
-            border-bottom: 2px solid #dc3545;
-            padding-bottom: 10px;
+            font-size: 28px; margin-top: 45px; margin-bottom: 25px;
+            color: #24292e; font-weight: 600;
+            border-bottom: 2px solid #dc3545; padding-bottom: 10px;
         }
 
-        /* Research Groups */
-        .research-info {
-            background-color: #fdfcf5;
-            padding: 25px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border-left: 4px solid #dc3545;
-        }
-
-        .research-info h3 {
-            font-size: 24px;
-            color: #24292e;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .research-info p {
-            font-size: 20px;
-        }
-
-        .research-info a {
-            color: green;
-            text-decoration: none;
-            font-size: 20px;
-        }
-
-        .research-info a:hover {
-            text-decoration: underline;
-        }
-
-        /* Paper */
         .paper {
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: #fdfcf5;
-            border-radius: 8px;
+            margin-bottom: 30px; padding: 20px;
+            background-color: #fdfcf5; border-radius: 8px;
             border-left: 4px solid #dc3545;
         }
 
         .paper-title {
-            font-size: 22px;
-            font-weight: 600;
-            color: #24292e;
-            display: flex;
-            align-items: flex-start;
-            cursor: pointer;
-            line-height: 1.4;
+            font-size: 20px; font-weight: 600; color: #24292e;
+            display: flex; align-items: flex-start;
+            cursor: pointer; line-height: 1.4;
         }
 
-        .paper-title:hover {
-            color: #dc3545;
-        }
+        .paper-title:hover { color: #dc3545; }
 
         .triangle {
-            width: 0;
-            height: 0;
+            width: 0; height: 0;
             border-left: 7px solid transparent;
             border-right: 7px solid transparent;
             border-top: 9px solid #dc3545;
-            margin-right: 14px;
-            margin-top: 7px;
-            transition: transform 0.2s ease;
-            flex-shrink: 0;
+            margin-right: 14px; margin-top: 7px;
+            transition: transform 0.2s ease; flex-shrink: 0;
         }
 
-        .triangle.open {
-            transform: rotate(90deg);
-        }
+        .triangle.open { transform: rotate(90deg); }
 
-        .paper-content {
-            display: none;
-            margin-top: 14px;
-            margin-left: 35px;
-        }
+        .paper-content { display: none; margin-top: 14px; margin-left: 35px; }
 
-        .journal {
-            font-style: italic;
-            color: #003366;
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
+        .journal { font-style: italic; color: #003366; margin-bottom: 10px; font-size: 18px; }
+
+        .authors { color: #555; margin-bottom: 8px; font-size: 17px; }
 
         .links a {
-            color: #dc3545;
-            text-decoration: none;
-            margin-right: 18px;
-            font-size: 20px;
-            font-weight: 500;
+            color: #dc3545; text-decoration: none;
+            margin-right: 18px; font-size: 18px; font-weight: 500;
         }
+        .links a:hover { text-decoration: underline; }
 
-        .links a:hover {
-            text-decoration: underline;
-        }
-
-        .links .accepted {
-            color: green;
-            font-weight: 600;
-            font-size: 20px;
+        .links .status-tag {
+            color: #2a7a2a; font-weight: 600; font-size: 18px; margin-right: 18px;
         }
 
         .abstract-toggle {
-            cursor: pointer;
-            font-size: 18px;
-            color: #dc3545;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 10px;
-            font-weight: 500;
+            cursor: pointer; font-size: 17px; color: #dc3545;
+            text-decoration: none; display: inline-block;
+            margin-top: 10px; font-weight: 500;
         }
-
-        .abstract-toggle:hover {
-            text-decoration: underline;
-        }
+        .abstract-toggle:hover { text-decoration: underline; }
 
         .abstract {
-            display: none;
-            margin-top: 12px;
-            padding: 18px;
-            background-color: #f5f5f5;
-            border-radius: 6px;
-            font-size: 19px;
-            color: #003366;
-            line-height: 1.8;
+            display: none; margin-top: 12px; padding: 18px;
+            background-color: #f5f5f5; border-radius: 6px;
+            font-size: 17px; color: #003366; line-height: 1.8;
             border: 1px solid #d4d4b8;
         }
 
-        .paper p {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-
-        .paper p a {
-            color: #dc3545;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .paper p a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 15px;
-                padding: 60px 20px 20px 20px;
-            }
-
-            .theme-toggle {
-                top: 10px;
-                right: 20px;
-            }
-
-            .nav-links {
-                gap: 15px;
-                justify-content: center;
-            }
-
-            .container {
-                padding: 0 20px;
-            }
-
-            h1 {
-                font-size: 34px;
-            }
-
-            h2 {
-                font-size: 24px;
-            }
-
-            .paper-title {
-                font-size: 20px;
-            }
+            nav { flex-direction: column; gap: 15px; padding: 60px 20px 20px 20px; }
+            .theme-toggle { top: 10px; right: 20px; }
+            .nav-links { gap: 15px; justify-content: center; }
+            .container { padding: 0 20px; }
+            h1 { font-size: 34px; }
+            h2 { font-size: 24px; }
+            .paper-title { font-size: 18px; }
         }
     </style>
     <script>
@@ -374,9 +149,7 @@
             const body = document.body;
             const themeIcon = document.getElementById('theme-icon');
             const themeText = document.getElementById('theme-text');
-            
             body.classList.toggle('dark-mode');
-            
             if (body.classList.contains('dark-mode')) {
                 themeIcon.className = 'fas fa-sun';
                 themeText.textContent = 'Light Mode';
@@ -388,28 +161,23 @@
             }
         }
 
-        // Load saved theme on page load
-        window.addEventListener('DOMContentLoaded', (event) => {
+        window.addEventListener('DOMContentLoaded', () => {
             const savedTheme = localStorage.getItem('theme');
-            const themeIcon = document.getElementById('theme-icon');
-            const themeText = document.getElementById('theme-text');
-            
             if (savedTheme === 'dark') {
                 document.body.classList.add('dark-mode');
-                themeIcon.className = 'fas fa-sun';
-                themeText.textContent = 'Light Mode';
+                document.getElementById('theme-icon').className = 'fas fa-sun';
+                document.getElementById('theme-text').textContent = 'Light Mode';
             }
         });
     </script>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <button class="theme-toggle" onclick="toggleTheme()">
             <i class="fas fa-moon" id="theme-icon"></i>
             <span id="theme-text">Dark Mode</span>
         </button>
-        <div class="nav-name">Yassine Ait Mohamed</div>
+        <div class="nav-name">Hassan Ou-azzou</div>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="research.html">Research</a>
@@ -419,102 +187,274 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <div class="container">
         <h1>Research</h1>
 
-        <!-- Research Groups -->
-        <div class="research-info">
-            <h3>Research Group</h3>
-            <p><a href="https://sag.recherche.usherbrooke.ca/equipe" target="_blank">SAG - Algebraic and Geometric Structures</a></p>
-        </div>
+        <!-- Preprints -->
+        <h2>Preprints</h2>
 
-        <div class="research-info">
-            <h3>Seminar Organization</h3>
-            <p>Organizer of <a href="https://junior-seminar-geomphys.github.io/JSGMP/index.html" target="_blank">Junior Seminar in Geometry and Mathematical Physics</a></p>
-        </div>
-
-        <h2>Papers</h2>
-
-        <!-- Paper 1: dp-Derivations -->
         <div class="paper">
-            <div class="paper-title" onclick="togglePaperContent('paper1-content', 'triangle1')">
-                <div id="triangle1" class="triangle"></div>
-                <span>Degree-Preserving Derivations on Graded Rings and Modules</span>
+            <div class="paper-title" onclick="togglePaperContent('pre1-content', 'pre1-tri')">
+                <div id="pre1-tri" class="triangle"></div>
+                <span>Skew polycyclic codes over finite chain rings associated to trinomials</span>
             </div>
-            <div id="paper1-content" class="paper-content">
+            <div id="pre1-content" class="paper-content">
+                <p class="authors">M. Bajalan, E. Martinez-Moro, <strong>H. Ou-azzou</strong></p>
                 <div class="links">
-                    <span class="accepted">Under review</span>
-                </div>                
-                <a href="#abstract1" class="abstract-toggle" onclick="togglePaperContent('abstract1', ''); event.stopPropagation();">▸ abstract</a>
-                <div id="abstract1" class="abstract">
-In this manuscript, we study homogeneous derivations that preserve the grading of a graded ring, which we call degree-preserving derivations (dp-derivations). We introduce the basic notions attached to dp-derivations and investigate their main properties, including dp-graded ideals, dp-closures, and dp-preimages. We then analyze structural aspects of dp-gr-simple rings and describe their behavior in both characteristic zero and positive characteristic. Furthermore, we construct dp-skew polynomial rings and show that important properties such as the gr-Noetherian condition and gr-simplicity are preserved under these extensions. Finally, we extend the theory to graded modules and develop an appropriate categorical framework for dp-graded structures.                </div>
-            </div>
-        </div>
-
-        <!-- Paper 2: Generalized homogeneous derivations -->
-        <div class="paper">
-            <div class="paper-title" onclick="togglePaperContent('paper2-content', 'triangle2')">
-                <div id="triangle2" class="triangle"></div>
-                <span>Generalized homogeneous derivations in graded rings</span>
-            </div>
-            <div id="paper2-content" class="paper-content">
-                <div class="links">
-                    <span class="accepted">Accepted for publication in Siberian Mathematical Journal</span>
-                </div>                
-                <a href="#abstract2" class="abstract-toggle" onclick="togglePaperContent('abstract2', ''); event.stopPropagation();">▸ abstract</a>
-                <div id="abstract2" class="abstract">
-                    We introduce a notion of generalized homogeneous derivations on graded rings as a natural extension of the homogeneous derivations introduced by Kanunnikov. We then define the concept of gr-generalized derivations, which preserve the degree of homogeneous components. Several significant results originally established for prime rings are extended to the setting of gr-prime rings. Furthermore, we characterize the conditions under which gr-semiprime rings contain non-trivial central graded ideals. In addition, we investigate the algebraic and module-theoretic structures of these maps, establish their functorial properties, and develop categorical frameworks that describe their derivation structures in both ring and module contexts.
+                    <span class="status-tag">Preprint (2025)</span>
                 </div>
             </div>
         </div>
 
-        <!-- Paper 3: On graded rings -->
-      <div class="paper">
-    <div class="paper-title" onclick="togglePaperContent('paper3-content', 'triangle3')">
-        <div id="triangle3" class="triangle"></div>
-        <span>On graded rings with homogeneous derivations</span>
-    </div>
-    <div id="paper3-content" class="paper-content">
-        <p class="journal">Revista de la Unión Matemática Argentina</p>
-        <div class="links">
-            <a href="https://doi.org/10.33044/revuma.4934" target="_blank">DOI</a>
-            <a href="Documents research/pdf1.pdf" target="_blank" class="pdf-icon" title="PDF">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                    <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-            </a>
-        </div>
-        <a href="#abstract3" class="abstract-toggle" onclick="togglePaperContent('abstract3', ''); event.stopPropagation();">▸ abstract</a>
-        <div id="abstract3" class="abstract">
-            We establish results related to homogeneous derivations, a concept introduced by Kanunnikov (2018). First, we prove the existence of a non-trivial family of derivations that are not homogeneous on graded rings. Furthermore, based on homogeneous derivations, we extend certain existing significant results in the context of prime (resp. semiprime) rings to gr-prime (resp. gr-semiprime) rings, such as Posner's and Herstein's theorems.
-        </div>
-    </div>
-</div>
-
-        
-        <h2>Master's Thesis (Sidi Mohamed Ben Abdellah University 2022)</h2>
         <div class="paper">
-            <div class="paper-title" onclick="togglePaperContent('thesis-content', 'triangle4')">
-                <div id="triangle4" class="triangle"></div>
-                <span>Divisors in Algebraic Geometry, Central Simple Algebras and Severi-Brauer Varieties</span>
+            <div class="paper-title" onclick="togglePaperContent('pre2-content', 'pre2-tri')">
+                <div id="pre2-tri" class="triangle"></div>
+                <span>Bounds and equivalence of skew polycyclic codes over finite fields</span>
             </div>
-            <div id="thesis-content" class="paper-content">
+            <div id="pre2-content" class="paper-content">
+                <p class="authors"><strong>H. Ou-azzou</strong>, A.-L. Horlemann, N. Aydin</p>
                 <div class="links">
-                    <a href="Documents research/master_thesis.pdf" target="_blank">PDF</a>
+                    <span class="status-tag">Preprint (2025)</span>
+                    <a href="http://dx.doi.org/10.48550/arXiv.2507.17571" target="_blank" rel="noopener">[arXiv]</a>
                 </div>
             </div>
         </div>
 
-        <h2>Notes</h2>
         <div class="paper">
-            <p>• Note on Central Simple Algebras and the Brauer Group [<a href="Documents research/On_Simple_Algebras.pdf" target="_blank">PDF</a>]</p>
-            <p>• Note on Sheaf Theory [<a href="Documents research/Note_on_sheaf_theory.pdf" target="_blank">PDF</a>]</p>                
+            <div class="paper-title" onclick="togglePaperContent('pre3-content', 'pre3-tri')">
+                <div id="pre3-tri" class="triangle"></div>
+                <span>On polycyclic codes associated to a trinomial over a finite chain ring</span>
+            </div>
+            <div id="pre3-content" class="paper-content">
+                <p class="authors">A. Chibloun, <strong>H. Ou-azzou</strong>, E. Martinez-Moro, M. Najmeddine</p>
+                <div class="links">
+                    <span class="status-tag">Preprint (2025)</span>
+                    <a href="http://dx.doi.org/10.48550/arXiv.2503.11765" target="_blank" rel="noopener">[arXiv]</a>
+                </div>
+            </div>
         </div>
+
+        <div class="paper">
+            <div class="paper-title" onclick="togglePaperContent('pre4-content', 'pre4-tri')">
+                <div id="pre4-tri" class="triangle"></div>
+                <span>On the Galois duals of One-generator quasi-monomial codes</span>
+            </div>
+            <div id="pre4-content" class="paper-content">
+                <p class="authors">O. Kabbouch, L. Mouatadid, M. Najmeddine, <strong>H. Ou-azzou</strong>, M. El Mahdi</p>
+                <div class="links">
+                    <span class="status-tag">Preprint (2025)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Journal Publications -->
+        <h2>Journal Publications</h2>
+
+        <div class="paper">
+            <div class="paper-title" onclick="togglePaperContent('p1-content', 'p1-tri')">
+                <div id="p1-tri" class="triangle"></div>
+                <span>Equivalence of classes of polycyclic codes over finite fields</span>
+            </div>
+            <div id="p1-content" class="paper-content">
+                <p class="authors"><strong>H. Ou-azzou</strong>, A.-L. Horlemann</p>
+                <p class="journal">Discrete Mathematics (to appear, 2026)</p>
+                <div class="links">
+                    <a href="http://arxiv.org/abs/2503.04498" target="_blank" rel="noopener">[arXiv]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title" onclick="togglePaperContent('p2-content', 'p2-tri')">
+                <div id="p2-tri" class="triangle"></div>
+                <span>On Metacyclic Twisted Codes</span>
+            </div>
+            <div id="p2-content" class="paper-content">
+                <p class="authors">L. Mouatadid, O. Kabouch, <strong>H. Ou-azzou</strong>, M. Najmeddine</p>
+                <p class="journal">Discrete Mathematics (2026)</p>
+                <div class="links">
+                    <a href="https://doi.org/10.1016/j.disc.2026.115201" target="_blank" rel="noopener">[Link]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title" onclick="togglePaperContent('p3-content', 'p3-tri')">
+                <div id="p3-tri" class="triangle"></div>
+                <span>On isometry and equivalence of constacyclic codes over finite chain rings</span>
+            </div>
+            <div id="p3-content" class="paper-content">
+                <p class="authors">A. Chibloun, <strong>H. Ou-azzou</strong>, M. Najmeddine</p>
+                <p class="journal">Cryptography and Communications (2025)</p>
+                <div class="links">
+                    <a href="https://link.springer.com/article/10.1007/s12095-024-00758-3" target="_blank" rel="noopener">[Link]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title" onclick="togglePaperContent('p4-content', 'p4-tri')">
+                <div id="p4-tri" class="triangle"></div>
+                <span>On isometry and equivalence of skew constacyclic codes</span>
+            </div>
+            <div id="p4-content" class="paper-content">
+                <p class="authors"><strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin</p>
+                <p class="journal">Discrete Mathematics (2025)</p>
+                <div class="links">
+                    <a href="http://dx.doi.org/10.1016/j.disc.2024.114279" target="_blank" rel="noopener">[Link]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title" onclick="togglePaperContent('p5-content', 'p5-tri')">
+                <div id="p5-tri" class="triangle"></div>
+                <span>On the algebraic structure of (M, σ, δ)-skew codes</span>
+            </div>
+            <div id="p5-content" class="paper-content">
+                <p class="authors"><strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin, E. Mouloua</p>
+                <p class="journal">Journal of Algebra (2024)</p>
+                <div class="links">
+                    <a href="https://doi.org/10.1016/j.jalgebra.2023.09.014" target="_blank" rel="noopener">[Link]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title" onclick="togglePaperContent('p6-content', 'p6-tri')">
+                <div id="p6-tri" class="triangle"></div>
+                <span>Linear codes invariant under cyclic endomorphisms</span>
+            </div>
+            <div id="p6-content" class="paper-content">
+                <p class="authors"><strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin</p>
+                <p class="journal">Journal of Algebra and its Applications (2024)</p>
+                <div class="links">
+                    <a href="https://doi.org/10.1142/S0219498825500653" target="_blank" rel="noopener">[Link]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title" onclick="togglePaperContent('p7-content', 'p7-tri')">
+                <div id="p7-tri" class="triangle"></div>
+                <span>On the structure of quasi T-cyclic codes</span>
+            </div>
+            <div id="p7-content" class="paper-content">
+                <p class="authors"><strong>H. Ou-azzou</strong>, B. Ialou, L. Mouatadid</p>
+                <p class="journal">Discrete Mathematics, Algorithms and Applications (2024)</p>
+                <div class="links">
+                    <a href="https://www.worldscientific.com/doi/10.1142/S1793830924500691" target="_blank" rel="noopener">[Link]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title" onclick="togglePaperContent('p8-content', 'p8-tri')">
+                <div id="p8-tri" class="triangle"></div>
+                <span>A class of skew constacyclic codes over ℤ₄+uℤ₄ with derivation</span>
+            </div>
+            <div id="p8-content" class="paper-content">
+                <p class="authors">M. El Hamdaoui, <strong>H. Ou-azzou</strong>, A. Boua</p>
+                <p class="journal">Discrete Mathematics, Algorithms and Applications (2024)</p>
+                <div class="links">
+                    <a href="https://www.worldscientific.com/doi/10.1142/S1793830924501271" target="_blank" rel="noopener">[Link]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title" onclick="togglePaperContent('p9-content', 'p9-tri')">
+                <div id="p9-tri" class="triangle"></div>
+                <span>Linear codes invariant under a linear transformation</span>
+            </div>
+            <div id="p9-content" class="paper-content">
+                <p class="authors"><strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin, P. Liu, B. Ialou, E. Mouloua</p>
+                <p class="journal">Advances in Mathematics of Communications (2024)</p>
+                <div class="links">
+                    <a href="https://www.aimsciences.org//article/doi/10.3934/amc.2024018" target="_blank" rel="noopener">[Link]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title" onclick="togglePaperContent('p10-content', 'p10-tri')">
+                <div id="p10-tri" class="triangle"></div>
+                <span>On the algebraic structure of quasi-polycyclic codes and new quantum codes</span>
+            </div>
+            <div id="p10-content" class="paper-content">
+                <p class="authors"><strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin</p>
+                <p class="journal">Quantum Information Processing (2024)</p>
+                <div class="links">
+                    <a href="https://link.springer.com/article/10.1007/s11128-024-04304-1" target="_blank" rel="noopener">[Link]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title" onclick="togglePaperContent('p11-content', 'p11-tri')">
+                <div id="p11-tri" class="triangle"></div>
+                <span>On monomial codes and their generalizations</span>
+            </div>
+            <div id="p11-content" class="paper-content">
+                <p class="authors"><strong>H. Ou-azzou</strong>, M. Najmeddine, L. Mouatadid, O. Kabouch</p>
+                <p class="journal">Journal of Algebra Combinatorics Discrete Structures and Applications (2022)</p>
+                <div class="links">
+                    <a href="https://jacodesmath.com/index.php/jacodesmath/article/view/247" target="_blank" rel="noopener">[Link]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title" onclick="togglePaperContent('p12-content', 'p12-tri')">
+                <div id="p12-tri" class="triangle"></div>
+                <span>A class of 1-generator right quasi-polycyclic codes</span>
+            </div>
+            <div id="p12-content" class="paper-content">
+                <p class="authors"><strong>H. Ou-azzou</strong>, B. Ialou, E. Mouloua</p>
+                <p class="journal">2nd International Conference on Innovative Research in Applied Science, Engineering and Technology (IRASET), 2022</p>
+                <div class="links">
+                    <a href="https://ieeexplore.ieee.org/document/9738244" target="_blank" rel="noopener">[Link]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title" onclick="togglePaperContent('p13-content', 'p13-tri')">
+                <div id="p13-tri" class="triangle"></div>
+                <span>Around the parameters of primitive BCH codes</span>
+            </div>
+            <div id="p13-content" class="paper-content">
+                <p class="authors">E. Mouloua, M. Najmeddine, <strong>H. Ou-azzou</strong></p>
+                <p class="journal">2nd International Conference on Innovative Research in Applied Science, Engineering and Technology (IRASET), 2022</p>
+                <div class="links">
+                    <a href="https://ieeexplore.ieee.org/document/9737805" target="_blank" rel="noopener">[Link]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title" onclick="togglePaperContent('p14-content', 'p14-tri')">
+                <div id="p14-tri" class="triangle"></div>
+                <span>On the algebraic structure of polycyclic codes</span>
+            </div>
+            <div id="p14-content" class="paper-content">
+                <p class="authors"><strong>H. Ou-azzou</strong>, M. Najmeddine</p>
+                <p class="journal">Filomat (2021)</p>
+                <div class="links">
+                    <a href="https://doiserbia.nb.rs/Article.aspx?ID=0354-51802110407O" target="_blank" rel="noopener">[Link]</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PhD Students -->
+        <h2>PhD Students</h2>
+        <div class="paper">
+            <p style="font-size:19px;">
+                <strong>Abdelaghafar Chibloun</strong> (since October 2023) — co-advised with Prof. M. Najmeddine, Faculty of Sciences, Meknes, Morocco.
+                Working on <em>equivalence and isometry of polycyclic codes over finite chain rings</em>.
+            </p>
+        </div>
+
     </div>
 </body>
 </html>

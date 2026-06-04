@@ -3,472 +3,577 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Hassan Ou-azzou | University of Sherbrooke</title>
-    <meta name="description" content="Hassan Ou-azzou, PhD student in Mathematics at University of Sherbrooke. Research in differential geometry, Poisson structures, shifted symplectic geometry, and algebraic geometry under supervision of Prof. Maxence Mayrand.">
-    <meta name="keywords" content="Yassine Ait Mohamed, mathematics, PhD student, differential geometry, Poisson geometry, shifted symplectic geometry, algebraic geometry, Lie groups, TQFT, University of Sherbrooke, Maxence Mayrand">
-    <meta name="author" content="Yassine Ait Mohamed">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="Hassanou-azzou">
-    <meta property="og:description" content="Research in differential geometry, Poisson structures, and shifted symplectic geometry at University of Sherbrooke">
-    <meta property="og:url" content="https://yassineaitmohamed.github.io/">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://yassineaitmohamed.github.io/photo.jpg">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Yassine Ait Mohamed - PhD Student in Mathematics">
-    <meta name="twitter:description" content="Research in differential geometry, Poisson structures, and shifted symplectic geometry">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://yassineaitmohamed.github.io/">
-    
-    <!-- Schema.org structured data for Google -->
+    <title>Hassan Ou-azzou</title>
+    <meta name="description" content="Hassan Ou-azzou — Postdoctoral Researcher in algebraic coding theory and post-quantum cryptography at Mohammed VI Polytechnic University (UM6P).">
+    <meta name="author" content="Hassan Ou-azzou">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Yassine Ait Mohamed",
-      "url": "https://yassineaitmohamed.github.io/",
-      "image": "https://yassineaitmohamed.github.io/photo.jpg",
-      "jobTitle": "PhD Student in Mathematics",
-      "affiliation": {
-        "@type": "Organization",
-        "name": "University of Sherbrooke"
-      },
-      "alumniOf": "University of Sidi Mohamed Ben Abdellah",
-      "email": "yassine.ait.mohamed@usherbrooke.ca",
+      "name": "Hassan Ou-azzou",
+      "jobTitle": "Postdoctoral Researcher",
+      "affiliation": {"@type": "Organization", "name": "Mohammed VI Polytechnic University (UM6P)"},
+      "email": "hassanpfe24@gmail.com",
       "sameAs": [
-        "https://github.com/yassineaitmohamed"
-      ],
-      "knowsAbout": [
-        "Differential Geometry",
-        "Poisson Geometry",
-        "Shifted Symplectic Geometry",
-        "Algebraic Geometry",
-        "Lie Groups",
-        "Topological Quantum Field Theories"
+        "https://www.researchgate.net/profile/Hassan-Ou-Azzou",
+        "https://orcid.org/0000-0001-7401-6150",
+        "https://github.com/ouazzouu"
       ]
     }
     </script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* ── Reset ── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        /* ── Base ── */
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Courier New', Courier, monospace;
-            line-height: 1.8;
-            color: #003366;
-            background-color: #f5f5dc;
-            padding: 20px;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 16px;
+            line-height: 1.75;
+            color: #1a1a1a;
+            background: #ffffff;
         }
 
-        /* Navigation */
+        /* ── Navigation ── */
+        header {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            z-index: 100;
+            padding: 0;
+        }
+
         nav {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 14px 24px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            padding: 40px 40px 20px 40px;
-            background-color: #f5f5dc;
-            border-bottom: 2px solid #d4d4b8;
-            margin-bottom: 50px;
-            position: relative;
-            gap: 40px;
+            gap: 0;
         }
 
-        .nav-name {
-            font-size: 28px;
-            font-weight: 700;
-            color: #24292e;
-            white-space: nowrap;
+        .site-name {
+            font-size: 17px;
+            font-weight: bold;
+            color: #1a1a1a;
+            text-decoration: none;
+            margin-right: auto;
+            letter-spacing: 0.01em;
         }
 
         .nav-links {
             display: flex;
-            gap: 40px;
-            flex-wrap: wrap;
             list-style: none;
-            align-items: center;
-        }
-
-        .theme-toggle {
-            position: absolute;
-            top: 20px;
-            right: 40px;
-            background-color: #ebe8d8;
-            border: 2px solid #d4d4b8;
-            border-radius: 25px;
-            padding: 8px 16px;
-            cursor: pointer;
-            font-size: 16px;
-            color: #003366;
-            font-weight: 500;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .theme-toggle:hover {
-            background-color: #dc3545;
-            color: white;
-            border-color: #dc3545;
-        }
-
-        /* Dark mode styles */
-        body.dark-mode {
-            background-color: #1a1a1a;
-            color: #e0e0e0;
-        }
-
-        body.dark-mode nav {
-            background-color: #1a1a1a;
-            border-bottom-color: #333;
-        }
-
-        body.dark-mode .nav-name {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .nav-links a {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .nav-links a:hover {
-            color: #dc3545;
-        }
-
-        body.dark-mode .theme-toggle {
-            background-color: #2a2a2a;
-            border-color: #444;
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .theme-toggle:hover {
-            background-color: #dc3545;
-            color: white;
-        }
-
-        body.dark-mode .intro-text,
-        body.dark-mode .affiliation {
-            color: #b0b0b0;
-        }
-
-        body.dark-mode h2 {
-            color: #e0e0e0;
-            border-bottom-color: #dc3545;
-        }
-
-        body.dark-mode .content a {
-            color: #dc3545;
-        }
-
-        body.dark-mode .social-links a {
-            background-color: #2a2a2a;
-            color: #e0e0e0;
-            border: 1px solid #444;
-        }
-
-        body.dark-mode .social-links a:hover {
-            background-color: #dc3545;
-            color: white;
-        }
-
-        body.dark-mode .contact-info {
-            color: #b0b0b0;
-        }
-
-        body.dark-mode .contact-info strong {
-            color: #e0e0e0;
+            gap: 28px;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #003366;
-            font-weight: 500;
-            font-size: 20px;
-            transition: color 0.3s;
+            color: #444;
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+            transition: color 0.2s;
         }
 
-        .nav-links a:hover {
-            color: #dc3545;
-        }
+        .nav-links a:hover { color: #000; }
 
-        /* Main Container */
-        .container {
-            max-width: 1200px;
+        /* ── Main layout ── */
+        main {
+            max-width: 820px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 280px;
-            gap: 60px;
-            padding: 0 20px;
+            padding: 48px 24px 80px;
         }
 
-        /* Content Section */
-        .content {
-            grid-column: 1 / 2;
+        /* ── Affiliation banner ── */
+        .affiliation-banner {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 42px;
         }
 
-        .intro-title {
-            font-size: 28px;
-            font-weight: 600;
-            color: #24292e;
-            margin-bottom: 20px;
+        /* ── Section ── */
+        section {
+            margin-bottom: 64px;
         }
 
-        .intro-text {
-            font-size: 20px;
-            color: #003366;
-            margin-bottom: 30px;
-            line-height: 1.8;
+        section h2 {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #777;
+            margin-bottom: 22px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
         }
 
-        .affiliation {
-            font-size: 20px;
-            color: #003366;
-            margin-bottom: 30px;
-            line-height: 1.8;
-        }
-
-        /* Photo Section */
-        .photo-section {
-            grid-column: 2 / 3;
-            position: sticky;
-            top: 20px;
+        /* ── About me ── */
+        #about {
             display: flex;
-            flex-direction: column;
-            gap: 20px;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 48px;
         }
 
-        .profile-photo {
-            width: 100%;
-            border-radius: 50%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            aspect-ratio: 1 / 1;
+        .about-text { flex: 1; }
+
+        .about-text p { margin-bottom: 16px; color: #222; }
+
+        .about-text a { color: #1a1a8a; text-decoration: none; }
+        .about-text a:hover { text-decoration: underline; }
+
+        .about-photo {
+            width: 150px;
+            flex-shrink: 0;
+        }
+
+        .about-photo img {
+            width: 150px;
+            height: 150px;
+            border-radius: 4px;
             object-fit: cover;
-        }
-
-        /* Social Links */
-        .social-links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 10px 14px;
-            border-radius: 8px;
-            background-color: #ebe8d8;
-            color: #003366;
-            text-decoration: none;
-            transition: all 0.3s;
-            font-size: 18px;
-            width: 100%;
-        }
-
-        .social-links a i {
-            width: 24px;
-            text-align: center;
-            font-size: 18px;
-            color: #dc3545;
-        }
-
-        .social-links a:hover {
-            background-color: #dc3545;
-            color: white;
-            transform: translateX(5px);
-            text-decoration: none;
-        }
-
-        .social-links a:hover i {
-            color: white;
-        }
-
-        .social-links .info-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 8px 12px;
-            font-size: 16px;
-            color: #003366;
-        }
-
-        .social-links .info-item i {
-            width: 24px;
-            text-align: center;
-            font-size: 16px;
-            color: #dc3545;
-        }
-
-        .contact-info {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #003366;
-            line-height: 1.6;
-        }
-
-        .contact-info strong {
             display: block;
-            margin-bottom: 5px;
-            color: #24292e;
-            font-weight: 600;
+            border: 1px solid #ddd;
         }
 
-        .contact-info a {
-            color: #dc3545;
+        /* ── Publications ── */
+        .pub-section-title {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #999;
+            margin: 28px 0 12px;
+        }
+
+        ol.pub-list {
+            padding-left: 24px;
+        }
+
+        ol.pub-list li {
+            margin-bottom: 14px;
+            color: #222;
+            line-height: 1.65;
+        }
+
+        .paper-title { font-style: italic; }
+
+        .paper-venue {
+            color: #555;
+            font-size: 15px;
+        }
+
+        .paper-links { font-size: 14px; }
+        .paper-links a {
+            color: #1a1a8a;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .paper-links a:hover { text-decoration: underline; }
+
+        .tag-preprint {
+            font-size: 13px;
+            color: #a00;
+            font-family: Arial, sans-serif;
+        }
+
+        .tag-toappear {
+            font-size: 13px;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* ── Talks ── */
+        ol.talk-list { padding-left: 24px; }
+
+        ol.talk-list li {
+            margin-bottom: 12px;
+            color: #222;
+            line-height: 1.65;
+        }
+
+        .talk-title { font-style: italic; }
+
+        .talk-venue {
+            color: #555;
+            font-size: 15px;
+        }
+
+        .talk-links { font-size: 14px; }
+        .talk-links a {
+            color: #1a1a8a;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .talk-links a:hover { text-decoration: underline; }
+
+        .invited-note {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 18px;
+        }
+
+        /* ── Contact ── */
+        .contact-block {
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            color: #333;
+            line-height: 2;
+        }
+
+        .contact-block a {
+            color: #1a1a8a;
             text-decoration: none;
         }
 
-        .contact-info a:hover {
-            text-decoration: underline;
+        .contact-block a:hover { text-decoration: underline; }
+
+        /* ── Footer ── */
+        footer {
+            border-top: 1px solid #ddd;
+            padding: 20px 24px;
+            max-width: 820px;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #aaa;
         }
 
-        /* Section Titles */
-        h2 {
-            font-size: 28px;
-            color: #24292e;
-            margin-bottom: 20px;
-            margin-top: 40px;
-            font-weight: 600;
-            border-bottom: 2px solid #dc3545;
-            padding-bottom: 10px;
-        }
-
-        /* Links in content */
-        .content a {
-            color: #dc3545;
-            text-decoration: none;
-        }
-
-        .content a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 15px;
-                padding: 60px 20px 20px 20px;
-            }
-
-            .theme-toggle {
-                top: 10px;
-                right: 20px;
-            }
-
-            .nav-links {
-                gap: 15px;
-                justify-content: center;
-            }
-
-            .container {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .photo-section {
-                position: static;
-                order: -1;
-            }
-
-            .content {
-                grid-column: 1 / -1;
-            }
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            #about { flex-direction: column-reverse; }
+            .about-photo { width: 100%; }
+            .about-photo img { width: 120px; height: 120px; }
+            .nav-links { gap: 16px; }
+            .site-name { font-size: 15px; }
         }
     </style>
 </head>
 <body>
+
+<header>
     <nav>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
-            <i class="fas fa-moon" id="theme-icon"></i>
-            <span id="theme-text">Dark Mode</span>
-        </button>
-        <div class="nav-name">Yassine Ait Mohamed</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="research.html">Research</a>
-            <a href="talks.html">Talks</a>
-            <a href="cv.html">CV</a>
-            <a href="teaching.html">Teaching</a>
-        </div>
+        <a href="#about" class="site-name">Hassan Ou-azzou</a>
+        <ul class="nav-links">
+            <li><a href="#about">About me</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#talks">Talks</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
+</header>
 
-    <script>
-        function toggleTheme() {
-            const body = document.body;
-            const themeIcon = document.getElementById('theme-icon');
-            const themeText = document.getElementById('theme-text');
-            
-            body.classList.toggle('dark-mode');
-            
-            if (body.classList.contains('dark-mode')) {
-                themeIcon.className = 'fas fa-sun';
-                themeText.textContent = 'Light Mode';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                themeIcon.className = 'fas fa-moon';
-                themeText.textContent = 'Dark Mode';
-                localStorage.setItem('theme', 'light');
-            }
-        }
+<main>
 
-        // Load saved theme on page load
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const savedTheme = localStorage.getItem('theme');
-            const themeIcon = document.getElementById('theme-icon');
-            const themeText = document.getElementById('theme-text');
-            
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
-                themeIcon.className = 'fas fa-sun';
-                themeText.textContent = 'Light Mode';
-            }
-        });
-    </script>
+    <!-- Affiliation -->
+    <div class="affiliation-banner">
+        Mohammed VI Polytechnic University (UM6P) &nbsp;·&nbsp; Ben Guerir, Morocco
+    </div>
 
-    <div class="container">
-        <div class="content">
-            <h1 class="intro-title">About Me</h1>
-            <div class="intro-text">
-                I am a PhD student in Mathematics at the University of Sherbrooke, under the supervision of 
-                <a href="https://maxencemayrand.github.io/" target="_blank" rel="noopener">Maxence Mayrand</a>.
-                Before that, I was a PhD student at the University of Sidi Mohamed Ben Abdellah, supervised by 
-                <a href="https://scholar.google.com/citations?hl=fr&user=D2ZlnJIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Lahcen Oukhtite</a>.
-            </div>
-
-            <h2>Research Interests</h2>
-            <p class="intro-text">
-                Derivations theory, Algebraic geometry, Lie groups, topological quantum field theories, shifted symplectic geometry, Poisson geometry
+    <!-- About -->
+    <div id="about">
+        <div class="about-text">
+            <p>
+                I am a Postdoctoral Researcher at the
+                <a href="https://www.um6p.ma/" target="_blank">Mohammed VI Polytechnic University (UM6P)</a>,
+                Ben Guerir, Morocco, where I work on coded distributed computing and high-performance computing
+                (since February 2026).
             </p>
-
-            <h2>Contact</h2>
-            <p class="intro-text">
-                <a href="mailto:yassine.ait.mohamed@usherbrooke.ca">yassine.ait.mohamed@usherbrooke.ca</a>
+            <p>
+                Before that, I held a <strong>Swiss Government Excellence Postdoctoral Fellowship</strong> at the
+                <a href="https://www.unisg.ch/" target="_blank">University of St. Gallen</a>, Switzerland (2024–2025),
+                working on coding theory and post-quantum cryptography under
+                <a href="https://www.unisg.ch/en/university/schools/school-of-computer-science/researchers/horlemann-anna-lena/" target="_blank">Prof. Anna-Lena Horlemann</a>.
+            </p>
+            <p>
+                I completed my PhD in Mathematics in 2023 at the
+                <a href="http://www.umi.ac.ma/" target="_blank">Moulay Ismail University</a>
+                (ENSAM, Meknes, Morocco), under the supervision of
+                <a href="mailto:m.najmeddine@umi.ac.ma">Prof. Mustapha Najmeddine</a>.
+                My thesis focused on the <em>algebraic structure of linear codes invariant under linear
+                and pseudo-linear transformations</em>.
+            </p>
+            <p>
+                My research lies at the intersection of algebra and information theory, with a focus on
+                algebraic coding theory — including skew codes, polycyclic codes, constacyclic codes,
+                and quasi-cyclic codes — as well as post-quantum cryptography and coded distributed computing.
             </p>
         </div>
-
-        <div class="photo-section">
-            <img src="photo.jpg" alt="Yassine Ait Mohamed - PhD Student in Mathematics" class="profile-photo">
-            
-            <div class="social-links">
-                <a href="https://github.com/yassineaitmohamed" target="_blank" rel="noopener">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </a>
-            </div>
+        <div class="about-photo">
+            <img src="photo.jpg" alt="Hassan Ou-azzou"
+                 onerror="this.parentElement.style.display='none'">
         </div>
     </div>
+
+    <!-- Publications -->
+    <section id="publications">
+        <h2>Publications</h2>
+
+        <div class="pub-section-title">Preprints</div>
+        <ol class="pub-list">
+            <li>
+                <strong>H. Ou-azzou</strong>, A.-L. Horlemann, N. Aydin.
+                <span class="paper-title">Bounds and equivalence of skew polycyclic codes over finite fields.</span>
+                <span class="tag-preprint">Preprint, 2025.</span>
+                <span class="paper-links">
+                    <a href="http://dx.doi.org/10.48550/arXiv.2507.17571" target="_blank">[arXiv]</a>
+                </span>
+            </li>
+            <li>
+                A. Chibloun, <strong>H. Ou-azzou</strong>, E. Martinez-Moro, M. Najmeddine.
+                <span class="paper-title">On polycyclic codes associated to a trinomial over a finite chain ring.</span>
+                <span class="tag-preprint">Preprint, 2025.</span>
+                <span class="paper-links">
+                    <a href="http://dx.doi.org/10.48550/arXiv.2503.11765" target="_blank">[arXiv]</a>
+                </span>
+            </li>
+            <li>
+                M. Bajalan, E. Martinez-Moro, <strong>H. Ou-azzou</strong>.
+                <span class="paper-title">Skew polycyclic codes over finite chain rings associated to trinomials.</span>
+                <span class="tag-preprint">Preprint, 2025.</span>
+            </li>
+            <li>
+                O. Kabbouch, L. Mouatadid, M. Najmeddine, <strong>H. Ou-azzou</strong>, M. El Mahdi.
+                <span class="paper-title">On the Galois duals of One-generator quasi-monomial codes.</span>
+                <span class="tag-preprint">Preprint, 2025.</span>
+            </li>
+        </ol>
+
+        <div class="pub-section-title">Journal Papers</div>
+        <ol class="pub-list">
+            <li>
+                <strong>H. Ou-azzou</strong>, A.-L. Horlemann.
+                <span class="paper-title">Equivalence of classes of polycyclic codes over finite fields.</span>
+                <span class="paper-venue"><em>Discrete Mathematics</em>, 2026. <span class="tag-toappear">(to appear)</span></span>
+                <span class="paper-links">
+                    <a href="http://arxiv.org/abs/2503.04498" target="_blank">[arXiv]</a>
+                </span>
+            </li>
+            <li>
+                L. Mouatadid, O. Kabouch, <strong>H. Ou-azzou</strong>, M. Najmeddine.
+                <span class="paper-title">On Metacyclic Twisted Codes.</span>
+                <span class="paper-venue"><em>Discrete Mathematics</em>, 2026.</span>
+                <span class="paper-links">
+                    <a href="https://doi.org/10.1016/j.disc.2026.115201" target="_blank">[Link]</a>
+                </span>
+            </li>
+            <li>
+                A. Chibloun, <strong>H. Ou-azzou</strong>, M. Najmeddine.
+                <span class="paper-title">On isometry and equivalence of constacyclic codes over finite chain rings.</span>
+                <span class="paper-venue"><em>Cryptography and Communications</em>, 2025.</span>
+                <span class="paper-links">
+                    <a href="https://link.springer.com/article/10.1007/s12095-024-00758-3" target="_blank">[Link]</a>
+                </span>
+            </li>
+            <li>
+                <strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin.
+                <span class="paper-title">On isometry and equivalence of skew constacyclic codes.</span>
+                <span class="paper-venue"><em>Discrete Mathematics</em>, 2025.</span>
+                <span class="paper-links">
+                    <a href="http://dx.doi.org/10.1016/j.disc.2024.114279" target="_blank">[Link]</a>
+                </span>
+            </li>
+            <li>
+                <strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin, E. Mouloua.
+                <span class="paper-title">On the algebraic structure of (M, σ, δ)-skew codes.</span>
+                <span class="paper-venue"><em>Journal of Algebra</em>, 2024.</span>
+                <span class="paper-links">
+                    <a href="https://doi.org/10.1016/j.jalgebra.2023.09.014" target="_blank">[Link]</a>
+                </span>
+            </li>
+            <li>
+                <strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin.
+                <span class="paper-title">Linear codes invariant under cyclic endomorphisms.</span>
+                <span class="paper-venue"><em>Journal of Algebra and its Applications</em>, 2024.</span>
+                <span class="paper-links">
+                    <a href="https://doi.org/10.1142/S0219498825500653" target="_blank">[Link]</a>
+                </span>
+            </li>
+            <li>
+                <strong>H. Ou-azzou</strong>, B. Ialou, L. Mouatadid.
+                <span class="paper-title">On the structure of quasi T-cyclic codes.</span>
+                <span class="paper-venue"><em>Discrete Mathematics, Algorithms and Applications</em>, 2024.</span>
+                <span class="paper-links">
+                    <a href="https://www.worldscientific.com/doi/10.1142/S1793830924500691" target="_blank">[Link]</a>
+                </span>
+            </li>
+            <li>
+                M. El Hamdaoui, <strong>H. Ou-azzou</strong>, A. Boua.
+                <span class="paper-title">A class of skew constacyclic codes over ℤ₄+uℤ₄ with derivation.</span>
+                <span class="paper-venue"><em>Discrete Mathematics, Algorithms and Applications</em>, 2024.</span>
+                <span class="paper-links">
+                    <a href="https://www.worldscientific.com/doi/10.1142/S1793830924501271" target="_blank">[Link]</a>
+                </span>
+            </li>
+            <li>
+                <strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin, P. Liu, B. Ialou, E. Mouloua.
+                <span class="paper-title">Linear codes invariant under a linear transformation.</span>
+                <span class="paper-venue"><em>Advances in Mathematics of Communications</em>, 2024.</span>
+                <span class="paper-links">
+                    <a href="https://www.aimsciences.org//article/doi/10.3934/amc.2024018" target="_blank">[Link]</a>
+                </span>
+            </li>
+            <li>
+                <strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin.
+                <span class="paper-title">On the algebraic structure of quasi-polycyclic codes and new quantum codes.</span>
+                <span class="paper-venue"><em>Quantum Information Processing</em>, 2024.</span>
+                <span class="paper-links">
+                    <a href="https://link.springer.com/article/10.1007/s11128-024-04304-1" target="_blank">[Link]</a>
+                </span>
+            </li>
+            <li>
+                <strong>H. Ou-azzou</strong>, M. Najmeddine, L. Mouatadid, O. Kabouch.
+                <span class="paper-title">On monomial codes and their generalizations.</span>
+                <span class="paper-venue"><em>Journal of Algebra Combinatorics Discrete Structures and Applications</em>, 2022.</span>
+                <span class="paper-links">
+                    <a href="https://jacodesmath.com/index.php/jacodesmath/article/view/247" target="_blank">[Link]</a>
+                </span>
+            </li>
+            <li>
+                <strong>H. Ou-azzou</strong>, M. Najmeddine.
+                <span class="paper-title">On the algebraic structure of polycyclic codes.</span>
+                <span class="paper-venue"><em>Filomat</em>, 2021.</span>
+                <span class="paper-links">
+                    <a href="https://doiserbia.nb.rs/Article.aspx?ID=0354-51802110407O" target="_blank">[Link]</a>
+                </span>
+            </li>
+        </ol>
+
+        <div class="pub-section-title">Conference Proceedings</div>
+        <ol class="pub-list">
+            <li>
+                <strong>H. Ou-azzou</strong>, B. Ialou, E. Mouloua.
+                <span class="paper-title">A class of 1-generator right quasi-polycyclic codes.</span>
+                <span class="paper-venue">2nd International Conference on Innovative Research in Applied Science, Engineering and Technology (IRASET), 2022.</span>
+                <span class="paper-links">
+                    <a href="https://ieeexplore.ieee.org/document/9738244" target="_blank">[Link]</a>
+                </span>
+            </li>
+            <li>
+                E. Mouloua, M. Najmeddine, <strong>H. Ou-azzou</strong>.
+                <span class="paper-title">Around the parameters of primitive BCH codes.</span>
+                <span class="paper-venue">2nd International Conference on Innovative Research in Applied Science, Engineering and Technology (IRASET), 2022.</span>
+                <span class="paper-links">
+                    <a href="https://ieeexplore.ieee.org/document/9737805" target="_blank">[Link]</a>
+                </span>
+            </li>
+        </ol>
+    </section>
+
+    <!-- Talks -->
+    <section id="talks">
+        <h2>Talks</h2>
+        <p class="invited-note">Talks indicated with an asterisk (*) are invited talks.</p>
+        <ol class="talk-list">
+            <li>
+                <span class="talk-title">On rank equivalence of skew polycyclic codes over finite fields.</span>
+                <span class="talk-venue">
+                    ICMM-ANTA25, November 2025, Fes, Morocco.
+                    <span class="talk-links">
+                        <a href="https://ens.usmba.ac.ma/Colloque-International/20-22-NOV-2025/" target="_blank">[Link]</a>
+                    </span>
+                </span>
+            </li>
+            <li>
+                <span class="talk-title">Bounds and equivalence of skew polycyclic codes over finite fields.</span>
+                <span class="talk-venue">
+                    NCRA IX, June–July 2025, France.
+                    <span class="talk-links">
+                        <a href="http://leroy.perso.math.cnrs.fr" target="_blank">[Link]</a>
+                    </span>
+                </span>
+            </li>
+            <li>
+                <span class="talk-title">Equivalence of Skew Polycyclic codes over finite fields (Part 2).</span>
+                <span class="talk-venue">
+                    * Neuchâtel–St.Gallen–Zurich Seminar in Coding Theory and Cryptography, University of Zürich, March 2025, Switzerland.
+                    <span class="talk-links">
+                        <a href="https://www.math.uzh.ch/aa/events" target="_blank">[Link]</a>
+                    </span>
+                </span>
+            </li>
+            <li>
+                <span class="talk-title">Equivalence of Polycyclic codes over finite fields (Part 1).</span>
+                <span class="talk-venue">
+                    * Neuchâtel–St.Gallen–Zurich Seminar in Coding Theory and Cryptography, University of Zürich, February 2025, Switzerland.
+                    <span class="talk-links">
+                        <a href="https://www.math.uzh.ch/aa/events" target="_blank">[Link]</a>
+                    </span>
+                </span>
+            </li>
+            <li>
+                <span class="talk-title">Structure of skew (M, σ, δ)-codes.</span>
+                <span class="talk-venue">
+                    Institute of Computer Sciences, University of St. Gallen, September 2024, Switzerland.
+                </span>
+            </li>
+            <li>
+                <span class="talk-title">On linear codes invariant under cyclic endomorphisms.</span>
+                <span class="talk-venue">
+                    NCRA VIII, August 2023, France.
+                    <span class="talk-links">
+                        <a href="http://leroy.perso.math.cnrs.fr" target="_blank">[Link]</a>
+                    </span>
+                </span>
+            </li>
+            <li>
+                <span class="talk-title">A class of 1-generator right quasi-polycyclic codes.</span>
+                <span class="talk-venue">
+                    IRASET'2022, March 2022, Moulay Ismail University, Meknes, Morocco.
+                </span>
+            </li>
+            <li>
+                <span class="talk-title">On the algebraic structure of skew cyclic codes with derivation.</span>
+                <span class="talk-venue">
+                    2nd International Congress on Pure and Applied Sciences, June 2022, Moulay Ismail University, Meknes, Morocco.
+                </span>
+            </li>
+            <li>
+                <span class="talk-title">On right polycyclic codes.</span>
+                <span class="talk-venue">
+                    The Three Days of Differential Geometry, November 2021, Moulay Ismail University, Meknes, Morocco.
+                </span>
+            </li>
+        </ol>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-block">
+            College of Computing<br>
+            Mohammed VI Polytechnic University (UM6P)<br>
+            Ben Guerir, Morocco<br>
+            <br>
+            Email: <a href="mailto:hassanpfe24@gmail.com">hassanpfe24@gmail.com</a><br>
+            Email: <a href="mailto:hassan.ouazzou-ext@um6p.ma">hassan.ouazzou-ext@um6p.ma</a><br>
+            Tel: (+212) 6-73-56-95-37<br>
+            <br>
+            <a href="https://www.researchgate.net/profile/Hassan-Ou-Azzou" target="_blank">ResearchGate</a>
+            &nbsp;·&nbsp;
+            <a href="https://orcid.org/0000-0001-7401-6150" target="_blank">ORCID</a>
+            &nbsp;·&nbsp;
+            <a href="https://github.com/ouazzouu" target="_blank">GitHub</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    Hassan Ou-azzou &mdash; Mohammed VI Polytechnic University (UM6P)
+</footer>
+
 </body>
 </html>
+                                                                                                                                                                                                                                                                                    

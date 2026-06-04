@@ -6,12 +6,8 @@
     <title>CV - Hassan Ou-azzou</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: 'Courier New', Courier, monospace;
             line-height: 1.8;
@@ -20,8 +16,7 @@
             font-size: 18px;
             padding: 20px;
         }
-        
-        /* Navigation */
+
         nav {
             display: flex;
             justify-content: center;
@@ -34,258 +29,94 @@
             position: relative;
         }
 
-        .nav-name {
-            font-size: 28px;
-            font-weight: 700;
-            color: #24292e;
-            white-space: nowrap;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            flex-wrap: wrap;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #003366;
-            font-weight: 500;
-            font-size: 20px;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #dc3545;
-        }
+        .nav-name { font-size: 28px; font-weight: 700; color: #24292e; white-space: nowrap; }
+        .nav-links { display: flex; gap: 40px; flex-wrap: wrap; list-style: none; align-items: center; }
+        .nav-links a { text-decoration: none; color: #003366; font-weight: 500; font-size: 20px; transition: color 0.3s; }
+        .nav-links a:hover { color: #dc3545; }
 
         .theme-toggle {
-            position: absolute;
-            top: 20px;
-            right: 40px;
-            background-color: #ebe8d8;
-            border: 2px solid #d4d4b8;
-            border-radius: 25px;
-            padding: 8px 16px;
-            cursor: pointer;
-            font-size: 16px;
-            color: #003366;
-            font-weight: 500;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            position: absolute; top: 20px; right: 40px;
+            background-color: #ebe8d8; border: 2px solid #d4d4b8;
+            border-radius: 25px; padding: 8px 16px; cursor: pointer;
+            font-size: 16px; color: #003366; font-weight: 500;
+            transition: all 0.3s; display: flex; align-items: center; gap: 8px;
         }
+        .theme-toggle:hover { background-color: #dc3545; color: white; border-color: #dc3545; }
 
-        .theme-toggle:hover {
-            background-color: #dc3545;
-            color: white;
-            border-color: #dc3545;
-        }
+        /* Dark mode */
+        body.dark-mode { background-color: #1a1a1a; color: #e0e0e0; }
+        body.dark-mode nav { background-color: #1a1a1a; border-bottom-color: #333; }
+        body.dark-mode .nav-name { color: #e0e0e0; }
+        body.dark-mode .nav-links a { color: #e0e0e0; }
+        body.dark-mode .nav-links a:hover { color: #dc3545; }
+        body.dark-mode .theme-toggle { background-color: #2a2a2a; border-color: #444; color: #e0e0e0; }
+        body.dark-mode .theme-toggle:hover { background-color: #dc3545; color: white; }
+        body.dark-mode h1, body.dark-mode h2 { color: #e0e0e0; }
+        body.dark-mode .entry-title { color: #e0e0e0; }
+        body.dark-mode .entry-detail { color: #b0b0b0; }
+        body.dark-mode a { color: #dc3545; }
 
-        /* Dark mode styles */
-        body.dark-mode {
-            background-color: #1a1a1a;
-            color: #e0e0e0;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 
-        body.dark-mode nav {
-            background-color: #1a1a1a;
-            border-bottom-color: #333;
-        }
-
-        body.dark-mode .nav-name {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .nav-links a {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .nav-links a:hover {
-            color: #dc3545;
-        }
-
-        body.dark-mode .theme-toggle {
-            background-color: #2a2a2a;
-            border-color: #444;
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .theme-toggle:hover {
-            background-color: #dc3545;
-            color: white;
-        }
-
-        body.dark-mode h1,
-        body.dark-mode h2,
-        body.dark-mode .institution,
-        body.dark-mode .review-date {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .position,
-        body.dark-mode .dates,
-        body.dark-mode .review-journal {
-            color: #b0b0b0;
-        }
-
-        body.dark-mode a {
-            color: #dc3545;
-        }
-        
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-        
         h1 {
-            font-size: 42px;
-            margin-bottom: 35px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #dc3545;
-            color: #24292e;
-            font-weight: 600;
+            font-size: 42px; margin-bottom: 35px;
+            padding-bottom: 12px; border-bottom: 2px solid #dc3545;
+            color: #24292e; font-weight: 600;
         }
-        
+
         h2 {
-            font-size: 32px;
-            margin-top: 45px;
-            margin-bottom: 25px;
-            color: #24292e;
-            font-weight: 600;
-            border-bottom: 2px solid #dc3545;
-            padding-bottom: 10px;
+            font-size: 28px; margin-top: 45px; margin-bottom: 25px;
+            color: #24292e; font-weight: 600;
+            border-bottom: 2px solid #dc3545; padding-bottom: 10px;
         }
-        
-        .summary-item {
+
+        .entry {
             position: relative;
-            margin-bottom: 35px;
+            margin-bottom: 28px;
             padding-left: 35px;
         }
-        
-        .summary-item::before {
+
+        .entry::before {
             content: '';
             position: absolute;
-            left: 0;
-            top: 12px;
-            width: 16px;
-            height: 16px;
+            left: 0; top: 12px;
+            width: 14px; height: 14px;
             background-color: #dc3545;
             border-radius: 50%;
         }
-        
-        .institution {
+
+        .entry-title {
             font-weight: bold;
             color: #24292e;
-            font-size: 22px;
-        }
-        
-        .position {
-            color: #003366;
             font-size: 20px;
+        }
+
+        .entry-detail {
+            color: #003366;
+            font-size: 18px;
             line-height: 1.8;
         }
-        
-        .dates {
-            color: #003366;
-            font-size: 20px;
-            line-height: 1.8;
-        }
-        
-        /* Review Activities */
-        .review-item {
-            position: relative;
-            margin-bottom: 35px;
-            padding-left: 35px;
-        }
-        
-        .review-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 12px;
-            width: 16px;
-            height: 16px;
-            background-color: #dc3545;
-            border-radius: 50%;
-        }
-        
-        .review-date {
-            font-weight: bold;
-            color: #24292e;
-            font-size: 22px;
-        }
-        
-        .review-journal {
-            color: #003366;
-            font-size: 20px;
-            line-height: 1.8;
-        }
-        
-        a {
-            color: #dc3545;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: 500;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Responsive */
+
+        a { color: #dc3545; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 15px;
-                padding: 60px 20px 20px 20px;
-            }
-
-            .theme-toggle {
-                top: 10px;
-                right: 20px;
-            }
-
-            .nav-links {
-                gap: 15px;
-                justify-content: center;
-            }
-            
-            .container {
-                padding: 0 20px;
-            }
-            
-            h1 {
-                font-size: 34px;
-            }
-            
-            h2 {
-                font-size: 28px;
-            }
-            
-            .institution, .review-date {
-                font-size: 20px;
-            }
-            
-            .position, .dates, .review-journal {
-                font-size: 18px;
-            }
+            nav { flex-direction: column; gap: 15px; padding: 60px 20px 20px 20px; }
+            .theme-toggle { top: 10px; right: 20px; }
+            .nav-links { gap: 15px; justify-content: center; }
+            .container { padding: 0 20px; }
+            h1 { font-size: 34px; }
+            h2 { font-size: 24px; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <button class="theme-toggle" onclick="toggleTheme()">
             <i class="fas fa-moon" id="theme-icon"></i>
             <span id="theme-text">Dark Mode</span>
         </button>
-        <div class="nav-name">Yassine Ait Mohamed</div>
+        <div class="nav-name">Hassan Ou-azzou</div>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="research.html">Research</a>
@@ -295,40 +126,97 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <div class="container">
         <h1>CV</h1>
-        
-        <h2>Summary</h2>
-        <div class="summary">
-            <div class="summary-item">
-                <p><span class="institution">University of St. Gallen:</span> <span class="position">Post-doc </span> <span class="dates">(2024—2025)</span></p>
-            </div>
-            <div class="summary-item">
-                <p><span class="institution">Moulay Ismail University:</span> <span class="position"> Doctorate in Mathematics</span> <span class="dates">(2018—2023)</span></p>
-            </div>
-            <div class="summary-item">
-                <p><span class="institution">Moulay Ismail University:</span> <span class="position">Master's degree in Mathematics</span> <span class="dates">(2015—2017)</span></p>
-            </div>
-            <div class="summary-item">
-                <p><span class="institution">Moulay Ismail University:</span> <span class="position">Bachelor's degree in Mathematics</span> <span class="dates">(2011—2015)</span></p>
-            </div>
+
+        <h2>Positions Held</h2>
+
+        <div class="entry">
+            <p class="entry-title">Postdoctoral Researcher — Mohammed VI Polytechnic University (UM6P)</p>
+            <p class="entry-detail">Ben Guerir, Morocco &nbsp;|&nbsp; February 2026 – present</p>
+            <p class="entry-detail">Topic: Coded distributed computing and High performance computing</p>
         </div>
 
-       <h2>Peer Review Activities</h2>
-<div class="review-activities">
-    <div class="review-item">
-        <p><span class="review-date">August 2025:</span> <span class="review-journal">Peer Reviewer, Proceedings of the International Geometry Center</span></p>
-    </div>
-    <div class="review-item">
-        <p><span class="review-date">June 2025:</span> <span class="review-journal">Peer Reviewer, International Journal of Neutrosophic Science</span></p>
-    </div>
-    <div class="review-item">
-        <p><span class="review-date">February 2025:</span> <span class="review-journal">Peer Reviewer, Asian Research Journal of Mathematics</span></p>
-    </div>
-</div>
+        <div class="entry">
+            <p class="entry-title">Research Assistant — Moulay Ismail University</p>
+            <p class="entry-detail">Department of Mathematics, National School of Arts and Crafts, Meknes, Morocco &nbsp;|&nbsp; September–December 2025</p>
+        </div>
+
+        <div class="entry">
+            <p class="entry-title">Postdoctoral Researcher (Swiss Government Excellence Scholarship) — University of St. Gallen</p>
+            <p class="entry-detail">Switzerland &nbsp;|&nbsp; September 2024 – August 2025</p>
+            <p class="entry-detail">Topic: Coding Theory and Post-Quantum Cryptography</p>
+        </div>
+
+        <div class="entry">
+            <p class="entry-title">Associate Lecturer — Moulay Ismail University</p>
+            <p class="entry-detail">Department of Mathematics, National School of Arts and Crafts, Meknes, Morocco &nbsp;|&nbsp; February–June 2024</p>
+            <p class="entry-detail">Course taught: Introduction to Probability Theory</p>
+        </div>
+
+        <div class="entry">
+            <p class="entry-title">Full Teacher of Mathematics — Ministry of Education, Morocco</p>
+            <p class="entry-detail">February 2018 – June 2024</p>
+            <p class="entry-detail">Courses: Functions, probability, arithmetic, and basic integral calculus for high school students</p>
+        </div>
+
+        <h2>Education</h2>
+
+        <div class="entry">
+            <p class="entry-title">Doctorate in Mathematics — Moulay Ismail University (ENSAM, Meknes)</p>
+            <p class="entry-detail">January 2018 – March 2023 &nbsp;|&nbsp; Supervisor: Prof. Mustapha Najmeddine</p>
+            <p class="entry-detail"><em>Algebraic Structure of Linear Codes Invariant under Linear and Pseudo-linear Transformations</em></p>
+        </div>
+
+        <div class="entry">
+            <p class="entry-title">Master's Degree in Geometry, Mathematical Physics and Applications — Moulay Ismail University</p>
+            <p class="entry-detail">September 2015 – September 2017 &nbsp;|&nbsp; Supervisor: Prof. Mustapha Najmeddine</p>
+            <p class="entry-detail"><em>Structure of Constacyclic Codes over Finite Fields</em></p>
+        </div>
+
+        <div class="entry">
+            <p class="entry-title">Bachelor's Degree in Mathematical Sciences — Moulay Ismail University</p>
+            <p class="entry-detail">2011–2015</p>
+            <p class="entry-detail"><em>A Finite Element Solution of the Heat Equation</em></p>
+        </div>
+
+        <h2>Awards &amp; Scholarships</h2>
+
+        <div class="entry">
+            <p class="entry-title">Swiss Government Excellence Postdoctoral Fellowship</p>
+            <p class="entry-detail">2024 &nbsp;|&nbsp; University of St. Gallen, Switzerland</p>
+        </div>
+
+        <div class="entry">
+            <p class="entry-title">Moroccan Government Fellowship for Master's Degree</p>
+            <p class="entry-detail">2015–2017 &nbsp;|&nbsp; Faculty of Sciences, Moulay Ismail University</p>
+        </div>
+
+        <div class="entry">
+            <p class="entry-title">Moroccan Government Fellowship for Bachelor's Degree</p>
+            <p class="entry-detail">2011–2015 &nbsp;|&nbsp; Faculty of Sciences, Moulay Ismail University</p>
+        </div>
+
+        <h2>Reviewing Activities</h2>
+
+        <div class="entry">
+            <p class="entry-title">Since 2025</p>
+            <p class="entry-detail"><em>Designs, Codes and Cryptography</em>; <em>Archiv der Mathematik</em>; <em>Finite Fields and Their Applications</em></p>
+        </div>
+
+        <div class="entry">
+            <p class="entry-title">Since 2024</p>
+            <p class="entry-detail"><em>Cryptography and Communications</em>; <em>Advances in Mathematics of Communications</em>; <em>Discrete Mathematics, Algorithms and Applications</em>; <em>Computational and Applied Mathematics</em></p>
+        </div>
+
+        <div class="entry">
+            <p class="entry-title">Since 2023</p>
+            <p class="entry-detail"><em>Journal of Algebra Combinatorics Discrete Structures and Applications</em></p>
+        </div>
+
         <h2>Full CV</h2>
-        <p><a href="cv.pdf">[PDF]</a></p>
+        <p><a href="cv.pdf">[Download PDF]</a></p>
+
     </div>
 
     <script>
@@ -336,9 +224,7 @@
             const body = document.body;
             const themeIcon = document.getElementById('theme-icon');
             const themeText = document.getElementById('theme-text');
-            
             body.classList.toggle('dark-mode');
-            
             if (body.classList.contains('dark-mode')) {
                 themeIcon.className = 'fas fa-sun';
                 themeText.textContent = 'Light Mode';
@@ -349,17 +235,12 @@
                 localStorage.setItem('theme', 'light');
             }
         }
-
-        // Load saved theme on page load
-        window.addEventListener('DOMContentLoaded', (event) => {
+        window.addEventListener('DOMContentLoaded', () => {
             const savedTheme = localStorage.getItem('theme');
-            const themeIcon = document.getElementById('theme-icon');
-            const themeText = document.getElementById('theme-text');
-            
             if (savedTheme === 'dark') {
                 document.body.classList.add('dark-mode');
-                themeIcon.className = 'fas fa-sun';
-                themeText.textContent = 'Light Mode';
+                document.getElementById('theme-icon').className = 'fas fa-sun';
+                document.getElementById('theme-text').textContent = 'Light Mode';
             }
         });
     </script>
