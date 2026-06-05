@@ -131,20 +131,6 @@
         .about-text a { color: #1a1a8a; text-decoration: none; }
         .about-text a:hover { text-decoration: underline; }
 
-        .about-photo {
-            width: 150px;
-            flex-shrink: 0;
-        }
-
-        .about-photo img {
-            width: 150px;
-            height: 150px;
-            border-radius: 4px;
-            object-fit: cover;
-            display: block;
-            border: 1px solid #ddd;
-        }
-
         /* ── Publications ── */
         .pub-section-title {
             font-family: Arial, sans-serif;
@@ -253,8 +239,6 @@
         /* ── Responsive ── */
         @media (max-width: 600px) {
             #about { flex-direction: column-reverse; }
-            .about-photo { width: 100%; }
-            .about-photo img { width: 120px; height: 120px; }
             .nav-links { gap: 16px; }
             .site-name { font-size: 15px; }
         }
