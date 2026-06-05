@@ -116,6 +116,29 @@
             border-bottom: 1px solid #e0e0e0;
         }
 
+
+        /* Photo */
+        .about-section {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        .about-photo {
+            width: 160px;
+            flex-shrink: 0;
+        }
+        .about-photo img {
+            width: 160px;
+            height: 160px;
+            border-radius: 4px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+        }
+        @media (max-width: 600px) {
+            .about-section { flex-direction: column-reverse; }
+            .about-photo { width: 120px; }
+            .about-photo img { width: 120px; height: 120px; }
+        }
         /* ── About me ── */
         #about {
             display: flex;
@@ -266,8 +289,9 @@
     </div>
 
     <!-- About -->
-    <div id="about">
-<div class="about-text">
+    <div id="about" class="about-section">
+<div class="about-photo"><img src="photo.jpg" alt="Hassan Ou-azzou"></div>
+        <div class="about-text">
             <p>
                 I am a Postdoctoral Researcher at the
                 <a href="https://www.um6p.ma/" target="_blank">Mohammed VI Polytechnic University (UM6P)</a>,
