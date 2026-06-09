@@ -9,56 +9,35 @@
     <style>
         .author__avatar img { border-radius: 50%; }
 
-        /* Paper entries */
-        .paper {
-            margin-bottom: 22px;
-            padding: 14px 16px;
+        .pub-list { list-style: none; padding: 0; margin: 0 0 32px; }
+        .pub-list li {
+            margin-bottom: 14px;
+            padding: 12px 14px;
             background: #f9f9f9;
             border-left: 3px solid #6f777d;
-            border-radius: 2px;
+            font-size: 0.88em;
+            line-height: 1.6;
         }
-        .paper-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: #222;
-                        display: flex;
-            align-items: flex-start;
-            gap: 10px;
+        .pub-title { font-weight: 700; font-style: italic; }
+        .pub-journal { color: #444; }
+        .pub-links { margin-top: 4px; }
+        .pub-links a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 0.9em;
         }
-        .paper-title:hover { color: #0066cc; }
-        .triangle {
-            width: 0; height: 0;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-top: 8px solid #6f777d;
-            margin-top: 6px;
-            flex-shrink: 0;
-            transition: transform 0.2s;
+        .pub-links a:hover { text-decoration: underline; }
+        .pub-tag {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #1a56db;
+            font-size: 0.78em;
+            padding: 1px 7px;
+            border-radius: 10px;
+            margin-right: 6px;
         }
-        .triangle.open { transform: rotate(90deg); }
-        .paper-content { display: block; margin-top: 8px; padding-left: 0; }
-        .authors { color: #555; font-size: 14px; margin-bottom: 4px; }
-        .journal { font-style: italic; color: #555; font-size: 14px; margin-bottom: 6px; }
-        .links a {
-            color: #0066cc; text-decoration: none;
-            font-size: 14px; margin-right: 12px;
-        }
-        .links a:hover { text-decoration: underline; }
-        .status-tag { color: #c0392b; font-size: 14px; margin-right: 12px; }
     </style>
-    <script>
-        function togglePaperContent(id, triId) {
-            const c = document.getElementById(id);
-            const t = document.getElementById(triId);
-            if (c.style.display === 'block') {
-                c.style.display = 'none';
-                if (t) t.classList.remove('open');
-            } else {
-                c.style.display = 'block';
-                if (t) t.classList.add('open');
-            }
-        }
-    </script>
 </head>
 <body class="layout--single">
 
@@ -107,212 +86,180 @@
 
                 <h1>Publications</h1>
 
+                <!-- Preprints -->
                 <h2>Preprints</h2>
+                <ul class="pub-list">
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>Skew polycyclic codes over finite chain rings associated to trinomials</span>
-                    </div>
-                    <div id="pre1-content" class="paper-content">
-                        <p class="authors">M. Bajalan, E. Martinez-Moro, <strong>H. Ou-azzou</strong></p>
-                        <div class="links"><span class="status-tag">Preprint (2025)</span></div>
-                    </div>
-                </div>
+                    <li>
+                        M. Bajalan, E. Martinez-Moro, <strong>H. Ou-azzou</strong>.
+                        <span class="pub-title">Skew polycyclic codes over finite chain rings associated to trinomials</span>.
+                        <span class="pub-journal">Preprint, 2025.</span>
+                    </li>
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>Bounds and equivalence of skew polycyclic codes over finite fields</span>
-                    </div>
-                    <div id="pre2-content" class="paper-content">
-                        <p class="authors"><strong>H. Ou-azzou</strong>, A.-L. Horlemann, N. Aydin</p>
-                        <div class="links">
-                            <span class="status-tag">Preprint (2025)</span>
+                    <li>
+                        <strong>H. Ou-azzou</strong>, A.-L. Horlemann, N. Aydin.
+                        <span class="pub-title">Bounds and equivalence of skew polycyclic codes over finite fields</span>.
+                        <span class="pub-journal">Preprint, 2025.</span>
+                        <div class="pub-links">
                             <a href="http://dx.doi.org/10.48550/arXiv.2507.17571" target="_blank">[arXiv]</a>
                         </div>
-                    </div>
-                </div>
+                    </li>
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>On polycyclic codes associated to a trinomial over a finite chain ring</span>
-                    </div>
-                    <div id="pre3-content" class="paper-content">
-                        <p class="authors">A. Chibloun, <strong>H. Ou-azzou</strong>, E. Martinez-Moro, M. Najmeddine</p>
-                        <div class="links">
-                            <span class="status-tag">Preprint (2025)</span>
+                    <li>
+                        A. Chibloun, <strong>H. Ou-azzou</strong>, E. Martinez-Moro, M. Najmeddine.
+                        <span class="pub-title">On polycyclic codes associated to a trinomial over a finite chain ring</span>.
+                        <span class="pub-journal">Preprint, 2025.</span>
+                        <div class="pub-links">
                             <a href="http://dx.doi.org/10.48550/arXiv.2503.11765" target="_blank">[arXiv]</a>
                         </div>
-                    </div>
-                </div>
+                    </li>
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>On the Galois duals of One-generator quasi-monomial codes</span>
-                    </div>
-                    <div id="pre4-content" class="paper-content">
-                        <p class="authors">O. Kabbouch, L. Mouatadid, M. Najmeddine, <strong>H. Ou-azzou</strong>, M. El Mahdi</p>
-                        <div class="links"><span class="status-tag">Preprint (2025)</span></div>
-                    </div>
-                </div>
+                    <li>
+                        O. Kabbouch, L. Mouatadid, M. Najmeddine, <strong>H. Ou-azzou</strong>, M. El Mahdi.
+                        <span class="pub-title">On the Galois duals of One-generator quasi-monomial codes</span>.
+                        <span class="pub-journal">Preprint, 2025.</span>
+                    </li>
 
+                </ul>
+
+                <!-- Journal Papers -->
                 <h2>Journal Papers</h2>
+                <ul class="pub-list">
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>Equivalence of classes of polycyclic codes over finite fields</span>
-                    </div>
-                    <div id="p1-content" class="paper-content">
-                        <p class="authors"><strong>H. Ou-azzou</strong>, A.-L. Horlemann</p>
-                        <p class="journal">Discrete Mathematics, 2026</p>
-                        <div class="links">
+                    <li>
+                        <strong>H. Ou-azzou</strong>, A.-L. Horlemann.
+                        <span class="pub-title">Equivalence of classes of polycyclic codes over finite fields</span>.
+                        <span class="pub-journal"><em>Discrete Mathematics</em>, 2026.</span>
+                        <div class="pub-links">
                             <a href="http://arxiv.org/abs/2503.04498" target="_blank">[arXiv]</a>
-                            <a href="https://doi.org/10.1016/j.disc.2026.115234" target="_blank">[Link]</a>
+                            <a href="https://doi.org/10.1016/j.disc.2026.115234" target="_blank">[Journal]</a>
                         </div>
-                    </div>
-                </div>
+                    </li>
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>On Metacyclic Twisted Codes</span>
-                    </div>
-                    <div id="p2-content" class="paper-content">
-                        <p class="authors">L. Mouatadid, O. Kabouch, <strong>H. Ou-azzou</strong>, M. Najmeddine</p>
-                        <p class="journal">Discrete Mathematics, 2026</p>
-                        <div class="links"><a href="https://doi.org/10.1016/j.disc.2026.115201" target="_blank">[Link]</a></div>
-                    </div>
-                </div>
+                    <li>
+                        L. Mouatadid, O. Kabouch, <strong>H. Ou-azzou</strong>, M. Najmeddine.
+                        <span class="pub-title">On Metacyclic Twisted Codes</span>.
+                        <span class="pub-journal"><em>Discrete Mathematics</em>, 2026.</span>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1016/j.disc.2026.115201" target="_blank">[Journal]</a>
+                        </div>
+                    </li>
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>On isometry and equivalence of constacyclic codes over finite chain rings</span>
-                    </div>
-                    <div id="p3-content" class="paper-content">
-                        <p class="authors">A. Chibloun, <strong>H. Ou-azzou</strong>, M. Najmeddine</p>
-                        <p class="journal">Cryptography and Communications, 2025</p>
-                        <div class="links"><a href="https://link.springer.com/article/10.1007/s12095-024-00758-3" target="_blank">[Link]</a></div>
-                    </div>
-                </div>
+                    <li>
+                        A. Chibloun, <strong>H. Ou-azzou</strong>, M. Najmeddine.
+                        <span class="pub-title">On isometry and equivalence of constacyclic codes over finite chain rings</span>.
+                        <span class="pub-journal"><em>Cryptography and Communications</em>, 2025.</span>
+                        <div class="pub-links">
+                            <a href="https://link.springer.com/article/10.1007/s12095-024-00758-3" target="_blank">[Journal]</a>
+                        </div>
+                    </li>
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>On isometry and equivalence of skew constacyclic codes</span>
-                    </div>
-                    <div id="p4-content" class="paper-content">
-                        <p class="authors"><strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin</p>
-                        <p class="journal">Discrete Mathematics, 2025</p>
-                        <div class="links"><a href="http://dx.doi.org/10.1016/j.disc.2024.114279" target="_blank">[Link]</a></div>
-                    </div>
-                </div>
+                    <li>
+                        <strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin.
+                        <span class="pub-title">On isometry and equivalence of skew constacyclic codes</span>.
+                        <span class="pub-journal"><em>Discrete Mathematics</em>, 2025.</span>
+                        <div class="pub-links">
+                            <a href="http://dx.doi.org/10.1016/j.disc.2024.114279" target="_blank">[Journal]</a>
+                        </div>
+                    </li>
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>On the algebraic structure of (M, σ, δ)-skew codes</span>
-                    </div>
-                    <div id="p5-content" class="paper-content">
-                        <p class="authors"><strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin, E. Mouloua</p>
-                        <p class="journal">Journal of Algebra, 2024</p>
-                        <div class="links"><a href="https://doi.org/10.1016/j.jalgebra.2023.09.014" target="_blank">[Link]</a></div>
-                    </div>
-                </div>
+                    <li>
+                        <strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin, E. Mouloua.
+                        <span class="pub-title">On the algebraic structure of (M, σ, δ)-skew codes</span>.
+                        <span class="pub-journal"><em>Journal of Algebra</em>, 2024.</span>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1016/j.jalgebra.2023.09.014" target="_blank">[Journal]</a>
+                        </div>
+                    </li>
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>Linear codes invariant under cyclic endomorphisms</span>
-                    </div>
-                    <div id="p6-content" class="paper-content">
-                        <p class="authors"><strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin</p>
-                        <p class="journal">Journal of Algebra and its Applications, 2024</p>
-                        <div class="links"><a href="https://doi.org/10.1142/S0219498825500653" target="_blank">[Link]</a></div>
-                    </div>
-                </div>
+                    <li>
+                        <strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin.
+                        <span class="pub-title">Linear codes invariant under cyclic endomorphisms</span>.
+                        <span class="pub-journal"><em>Journal of Algebra and its Applications</em>, 2024.</span>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1142/S0219498825500653" target="_blank">[Journal]</a>
+                        </div>
+                    </li>
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>On the structure of quasi T-cyclic codes</span>
-                    </div>
-                    <div id="p7-content" class="paper-content">
-                        <p class="authors"><strong>H. Ou-azzou</strong>, B. Ialou, L. Mouatadid</p>
-                        <p class="journal">Discrete Mathematics, Algorithms and Applications, 2024</p>
-                        <div class="links"><a href="https://www.worldscientific.com/doi/10.1142/S1793830924500691" target="_blank">[Link]</a></div>
-                    </div>
-                </div>
+                    <li>
+                        <strong>H. Ou-azzou</strong>, B. Ialou, L. Mouatadid.
+                        <span class="pub-title">On the structure of quasi T-cyclic codes</span>.
+                        <span class="pub-journal"><em>Discrete Mathematics, Algorithms and Applications</em>, 2024.</span>
+                        <div class="pub-links">
+                            <a href="https://www.worldscientific.com/doi/10.1142/S1793830924500691" target="_blank">[Journal]</a>
+                        </div>
+                    </li>
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>A class of skew constacyclic codes over ℤ₄+uℤ₄ with derivation</span>
-                    </div>
-                    <div id="p8-content" class="paper-content">
-                        <p class="authors">M. El Hamdaoui, <strong>H. Ou-azzou</strong>, A. Boua</p>
-                        <p class="journal">Discrete Mathematics, Algorithms and Applications, 2024</p>
-                        <div class="links"><a href="https://www.worldscientific.com/doi/10.1142/S1793830924501271" target="_blank">[Link]</a></div>
-                    </div>
-                </div>
+                    <li>
+                        M. El Hamdaoui, <strong>H. Ou-azzou</strong>, A. Boua.
+                        <span class="pub-title">A class of skew constacyclic codes over ℤ₄+uℤ₄ with derivation</span>.
+                        <span class="pub-journal"><em>Discrete Mathematics, Algorithms and Applications</em>, 2024.</span>
+                        <div class="pub-links">
+                            <a href="https://www.worldscientific.com/doi/10.1142/S1793830924501271" target="_blank">[Journal]</a>
+                        </div>
+                    </li>
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>Linear codes invariant under a linear transformation</span>
-                    </div>
-                    <div id="p9-content" class="paper-content">
-                        <p class="authors"><strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin, P. Liu, B. Ialou, E. Mouloua</p>
-                        <p class="journal">Advances in Mathematics of Communications, 2024</p>
-                        <div class="links"><a href="https://www.aimsciences.org//article/doi/10.3934/amc.2024018" target="_blank">[Link]</a></div>
-                    </div>
-                </div>
+                    <li>
+                        <strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin, P. Liu, B. Ialou, E. Mouloua.
+                        <span class="pub-title">Linear codes invariant under a linear transformation</span>.
+                        <span class="pub-journal"><em>Advances in Mathematics of Communications</em>, 2024.</span>
+                        <div class="pub-links">
+                            <a href="https://www.aimsciences.org//article/doi/10.3934/amc.2024018" target="_blank">[Journal]</a>
+                        </div>
+                    </li>
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>On the algebraic structure of quasi-polycyclic codes and new quantum codes</span>
-                    </div>
-                    <div id="p10-content" class="paper-content">
-                        <p class="authors"><strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin</p>
-                        <p class="journal">Quantum Information Processing, 2024</p>
-                        <div class="links"><a href="https://link.springer.com/article/10.1007/s11128-024-04304-1" target="_blank">[Link]</a></div>
-                    </div>
-                </div>
+                    <li>
+                        <strong>H. Ou-azzou</strong>, M. Najmeddine, N. Aydin.
+                        <span class="pub-title">On the algebraic structure of quasi-polycyclic codes and new quantum codes</span>.
+                        <span class="pub-journal"><em>Quantum Information Processing</em>, 2024.</span>
+                        <div class="pub-links">
+                            <a href="https://link.springer.com/article/10.1007/s11128-024-04304-1" target="_blank">[Journal]</a>
+                        </div>
+                    </li>
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>On monomial codes and their generalizations</span>
-                    </div>
-                    <div id="p11-content" class="paper-content">
-                        <p class="authors"><strong>H. Ou-azzou</strong>, M. Najmeddine, L. Mouatadid, O. Kabouch</p>
-                        <p class="journal">Journal of Algebra Combinatorics Discrete Structures and Applications, 2022</p>
-                        <div class="links"><a href="https://jacodesmath.com/index.php/jacodesmath/article/view/247" target="_blank">[Link]</a></div>
-                    </div>
-                </div>
+                    <li>
+                        <strong>H. Ou-azzou</strong>, M. Najmeddine, L. Mouatadid, O. Kabouch.
+                        <span class="pub-title">On monomial codes and their generalizations</span>.
+                        <span class="pub-journal"><em>Journal of Algebra Combinatorics Discrete Structures and Applications</em>, 2022.</span>
+                        <div class="pub-links">
+                            <a href="https://jacodesmath.com/index.php/jacodesmath/article/view/247" target="_blank">[Journal]</a>
+                        </div>
+                    </li>
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>A class of 1-generator right quasi-polycyclic codes</span>
-                    </div>
-                    <div id="p12-content" class="paper-content">
-                        <p class="authors"><strong>H. Ou-azzou</strong>, B. Ialou, E. Mouloua</p>
-                        <p class="journal">IRASET, 2022</p>
-                        <div class="links"><a href="https://ieeexplore.ieee.org/document/9738244" target="_blank">[Link]</a></div>
-                    </div>
-                </div>
+                    <li>
+                        <strong>H. Ou-azzou</strong>, M. Najmeddine.
+                        <span class="pub-title">On the algebraic structure of polycyclic codes</span>.
+                        <span class="pub-journal"><em>Filomat</em>, 2021.</span>
+                        <div class="pub-links">
+                            <a href="https://doiserbia.nb.rs/Article.aspx?ID=0354-51802110407O" target="_blank">[Journal]</a>
+                        </div>
+                    </li>
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>Around the parameters of primitive BCH codes</span>
-                    </div>
-                    <div id="p13-content" class="paper-content">
-                        <p class="authors">E. Mouloua, M. Najmeddine, <strong>H. Ou-azzou</strong></p>
-                        <p class="journal">IRASET, 2022</p>
-                        <div class="links"><a href="https://ieeexplore.ieee.org/document/9737805" target="_blank">[Link]</a></div>
-                    </div>
-                </div>
+                </ul>
 
-                <div class="paper">
-                    <div class="paper-title">
-                        <span>On the algebraic structure of polycyclic codes</span>
-                    </div>
-                    <div id="p14-content" class="paper-content">
-                        <p class="authors"><strong>H. Ou-azzou</strong>, M. Najmeddine</p>
-                        <p class="journal">Filomat, 2021</p>
-                        <div class="links"><a href="https://doiserbia.nb.rs/Article.aspx?ID=0354-51802110407O" target="_blank">[Link]</a></div>
-                    </div>
-                </div>
+                <!-- Conference Proceedings -->
+                <h2>Conference Proceedings</h2>
+                <ul class="pub-list">
+
+                    <li>
+                        <strong>H. Ou-azzou</strong>, B. Ialou, E. Mouloua.
+                        <span class="pub-title">A class of 1-generator right quasi-polycyclic codes</span>.
+                        <span class="pub-journal"><em>IRASET</em>, 2022.</span>
+                        <div class="pub-links">
+                            <a href="https://ieeexplore.ieee.org/document/9738244" target="_blank">[Journal]</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        E. Mouloua, M. Najmeddine, <strong>H. Ou-azzou</strong>.
+                        <span class="pub-title">Around the parameters of primitive BCH codes</span>.
+                        <span class="pub-journal"><em>IRASET</em>, 2022.</span>
+                        <div class="pub-links">
+                            <a href="https://ieeexplore.ieee.org/document/9737805" target="_blank">[Journal]</a>
+                        </div>
+                    </li>
+
+                </ul>
 
             </section>
         </div>
@@ -327,3 +274,4 @@
 
 </body>
 </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
