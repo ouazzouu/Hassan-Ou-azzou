@@ -21,8 +21,7 @@
             font-size: 16px;
             font-weight: 600;
             color: #222;
-            cursor: pointer;
-            display: flex;
+                        display: flex;
             align-items: flex-start;
             gap: 10px;
         }
@@ -37,7 +36,7 @@
             transition: transform 0.2s;
         }
         .triangle.open { transform: rotate(90deg); }
-        .paper-content { display: none; margin-top: 10px; padding-left: 20px; }
+        .paper-content { display: block; margin-top: 8px; padding-left: 0; }
         .authors { color: #555; font-size: 14px; margin-bottom: 4px; }
         .journal { font-style: italic; color: #555; font-size: 14px; margin-bottom: 6px; }
         .links a {
@@ -111,8 +110,7 @@
                 <h2>Preprints</h2>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('pre1-content','pre1-tri')">
-                        <div id="pre1-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>Skew polycyclic codes over finite chain rings associated to trinomials</span>
                     </div>
                     <div id="pre1-content" class="paper-content">
@@ -122,8 +120,7 @@
                 </div>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('pre2-content','pre2-tri')">
-                        <div id="pre2-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>Bounds and equivalence of skew polycyclic codes over finite fields</span>
                     </div>
                     <div id="pre2-content" class="paper-content">
@@ -136,8 +133,7 @@
                 </div>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('pre3-content','pre3-tri')">
-                        <div id="pre3-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>On polycyclic codes associated to a trinomial over a finite chain ring</span>
                     </div>
                     <div id="pre3-content" class="paper-content">
@@ -150,8 +146,7 @@
                 </div>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('pre4-content','pre4-tri')">
-                        <div id="pre4-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>On the Galois duals of One-generator quasi-monomial codes</span>
                     </div>
                     <div id="pre4-content" class="paper-content">
@@ -163,8 +158,7 @@
                 <h2>Journal Papers</h2>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('p1-content','p1-tri')">
-                        <div id="p1-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>Equivalence of classes of polycyclic codes over finite fields</span>
                     </div>
                     <div id="p1-content" class="paper-content">
@@ -178,8 +172,7 @@
                 </div>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('p2-content','p2-tri')">
-                        <div id="p2-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>On Metacyclic Twisted Codes</span>
                     </div>
                     <div id="p2-content" class="paper-content">
@@ -190,8 +183,7 @@
                 </div>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('p3-content','p3-tri')">
-                        <div id="p3-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>On isometry and equivalence of constacyclic codes over finite chain rings</span>
                     </div>
                     <div id="p3-content" class="paper-content">
@@ -202,8 +194,7 @@
                 </div>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('p4-content','p4-tri')">
-                        <div id="p4-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>On isometry and equivalence of skew constacyclic codes</span>
                     </div>
                     <div id="p4-content" class="paper-content">
@@ -214,8 +205,7 @@
                 </div>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('p5-content','p5-tri')">
-                        <div id="p5-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>On the algebraic structure of (M, σ, δ)-skew codes</span>
                     </div>
                     <div id="p5-content" class="paper-content">
@@ -226,8 +216,7 @@
                 </div>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('p6-content','p6-tri')">
-                        <div id="p6-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>Linear codes invariant under cyclic endomorphisms</span>
                     </div>
                     <div id="p6-content" class="paper-content">
@@ -238,8 +227,7 @@
                 </div>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('p7-content','p7-tri')">
-                        <div id="p7-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>On the structure of quasi T-cyclic codes</span>
                     </div>
                     <div id="p7-content" class="paper-content">
@@ -250,8 +238,7 @@
                 </div>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('p8-content','p8-tri')">
-                        <div id="p8-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>A class of skew constacyclic codes over ℤ₄+uℤ₄ with derivation</span>
                     </div>
                     <div id="p8-content" class="paper-content">
@@ -262,8 +249,7 @@
                 </div>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('p9-content','p9-tri')">
-                        <div id="p9-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>Linear codes invariant under a linear transformation</span>
                     </div>
                     <div id="p9-content" class="paper-content">
@@ -274,8 +260,7 @@
                 </div>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('p10-content','p10-tri')">
-                        <div id="p10-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>On the algebraic structure of quasi-polycyclic codes and new quantum codes</span>
                     </div>
                     <div id="p10-content" class="paper-content">
@@ -286,8 +271,7 @@
                 </div>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('p11-content','p11-tri')">
-                        <div id="p11-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>On monomial codes and their generalizations</span>
                     </div>
                     <div id="p11-content" class="paper-content">
@@ -298,8 +282,7 @@
                 </div>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('p12-content','p12-tri')">
-                        <div id="p12-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>A class of 1-generator right quasi-polycyclic codes</span>
                     </div>
                     <div id="p12-content" class="paper-content">
@@ -310,8 +293,7 @@
                 </div>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('p13-content','p13-tri')">
-                        <div id="p13-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>Around the parameters of primitive BCH codes</span>
                     </div>
                     <div id="p13-content" class="paper-content">
@@ -322,8 +304,7 @@
                 </div>
 
                 <div class="paper">
-                    <div class="paper-title" onclick="togglePaperContent('p14-content','p14-tri')">
-                        <div id="p14-tri" class="triangle"></div>
+                    <div class="paper-title">
                         <span>On the algebraic structure of polycyclic codes</span>
                     </div>
                     <div id="p14-content" class="paper-content">
