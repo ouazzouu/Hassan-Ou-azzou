@@ -11,10 +11,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         /* ── Ink & Sage theme ── */
-        .masthead { background: #22293a !important; border-bottom: none !important; }
-        .masthead a, .masthead .site-title,
-        .greedy-nav a, .greedy-nav .site-title { color: #f4f5f2 !important; }
-        .greedy-nav a:hover { color: #7a9e8e !important; }
+        .masthead,
+        .masthead__inner-wrap,
+        .greedy-nav { background: #22293a !important; border-bottom: none !important; }
+
+        .masthead a,
+        .masthead .site-title,
+        .greedy-nav a,
+        .greedy-nav .site-title,
+        .greedy-nav .visible-links a,
+        .greedy-nav .visible-links .masthead__menu-item a { color: #f4f5f2 !important; }
+
+        .greedy-nav a:hover,
+        .greedy-nav .visible-links a:hover { color: #7a9e8e !important; }
         .greedy-nav .visible-links a:before { background: #7a9e8e !important; }
 
         body { background: #f4f5f2 !important; }
@@ -170,6 +179,4 @@
                     <tbody>
                         <tr>
                             <td>Algebra &amp; Finite<br>Fields and rings</td>
-                            <td>Classification of semifields; isotopies between semifields; factorization of polynomials
-                            and skew polynomials over finite fields (rings); applications to coding theory and
-                            cryptogra
+                            <td>Classification of semifiel
