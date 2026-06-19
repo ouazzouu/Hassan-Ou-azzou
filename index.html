@@ -11,12 +11,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         /* Small overrides */
-        .page__content p { font-size: 0.85em; }
         .author__avatar img { border-radius: 50%; }
-        .research-block {
-            border-left: 3px solid #6f777d;
-            padding-left: 1em;
-            margin-bottom: 1em;
+        .research-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+            font-size: 0.92em;
+        }
+        .research-table td {
+            padding: 10px 14px;
+            vertical-align: top;
+            border: 1px solid #ddd;
+        }
+        .research-table td:first-child {
+            font-weight: 700;
+            white-space: nowrap;
+            background: #f4f4f4;
+            color: #333;
+            width: 140px;
         }
     </style>
 </head>
@@ -46,7 +58,7 @@
 
             <!-- Photo -->
             <div class="author__avatar">
-                <img src="profile.jpg" alt="Hassan Ou-azzou" itemprop="image">
+                <img src="photo.jpg" alt="Hassan Ou-azzou" itemprop="image">
             </div>
 
             <!-- Name & title -->
@@ -132,44 +144,25 @@
 
                 <h2 id="research-interests">Research Interests</h2>
 
-                <p>
-                    My research interests lie at the intersection of algebra, coding theory, cryptography,
-                    and their applications. More specifically, they are organized around three main directions:
-                </p>
-
-                <div class="research-block">
-                    <p><strong>Algebraic Coding Theory:</strong> Study and construction of linear codes with cyclic
-                    and skew-cyclic structures, including polycyclic, constacyclic, quasi-cyclic, and quasi-twisted
-                    codes; investigation of rank and Hamming equivalence of skew polycyclic codes; development of
-                    LDPC and skew convolutional codes; and construction of CSS quantum codes.</p>
-                </div>
-
-                <div class="research-block">
-                    <p><strong>Code-Based Cryptography:</strong> Design of cryptographic systems based on codes
-                    with various cyclic structures, extending beyond the classical quasi-cyclic framework
-                    (e.g., in the spirit of BIKE), with an emphasis on post-quantum security.</p>
-                </div>
-
-                <div class="research-block">
-                    <p><strong>Coded Distributed Computing:</strong> Application of algebraic coding techniques,
-                    particularly polynomial codes, to distributed machine learning, deep learning, and
-                    distributed matrix multiplication.</p>
-                </div>
-
-            </section>
-        </div>
-    </article>
-</div>
-
-<!-- Footer -->
-<div id="footer" class="page__footer">
-    <footer>
-        <div class="page__footer-copyright">
-            &copy; 2026 Hassan Ou-azzou
-        </div>
-    </footer>
-</div>
-
-</body>
-</html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                <table class="research-table">
+                    <tbody>
+                        <tr>
+                            <td>Algebra &amp; Finite<br>Fields and rings</td>
+                            <td>Classification of semifields; isotopies between semifields; factorization of polynomials
+                            and skew polynomials over finite fields (rings); applications to coding theory and
+                            cryptography.</td>
+                        </tr>
+                        <tr>
+                            <td>Coding Theory</td>
+                            <td>Equivalence and isometry (Hamming and rank metrics) of polycyclic and skew codes;
+                            construction of linear and CSS quantum codes; skew LDPC and convolutional codes;
+                            cyclic and quasi-cyclic structures (polycyclic, constacyclic, quasi-twisted codes).</td>
+                        </tr>
+                        <tr>
+                            <td>Cryptography</td>
+                            <td>Code-based post-quantum cryptosystems; cyclic code structures beyond the classical
+                            quasi-cyclic framework (BIKE-type schemes).</td>
+                        </tr>
+                        <tr>
+                            <td>Distributed<br>Computing</td>
+                            <td>Polynomial codes for distributed machine learning,
