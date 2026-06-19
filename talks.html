@@ -1,226 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talks - Hassan Ou-azzou</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Talks — Hassan Ou-azzou</title>
+    <link rel="stylesheet" href="https://ehbergou.github.io/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            line-height: 1.8;
-            color: #22293a;
-            background-color: #f4f5f2;
-            font-size: 18px;
-            padding: 20px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 40px 20px 40px;
-            background-color: #f4f5f2;
-            border-bottom: 2px solid #c5cfc9;
-            margin-bottom: 50px;
-            gap: 40px;
-            position: relative;
-        }
-
-        .nav-name { font-size: 28px; font-weight: 700; color: #22293a; white-space: nowrap; }
-        .nav-links { display: flex; gap: 40px; flex-wrap: wrap; list-style: none; align-items: center; }
-        .nav-links a { text-decoration: none; color: #22293a; font-weight: 500; font-size: 20px; transition: color 0.3s; }
-        .nav-links a:hover { color: #7a9e8e; }
-
-        .theme-toggle {
-            position: absolute; top: 20px; right: 40px;
-            background-color: #e4eeea; border: 2px solid #c5cfc9;
-            border-radius: 25px; padding: 8px 16px; cursor: pointer;
-            font-size: 16px; color: #22293a; font-weight: 500;
-            transition: all 0.3s; display: flex; align-items: center; gap: 8px;
-        }
-        .theme-toggle:hover { background-color: #7a9e8e; color: white; border-color: #7a9e8e; }
-
-        /* Dark mode */
-        body.dark-mode { background-color: #1e2430; color: #e0e0e0; }
-        body.dark-mode nav { background-color: #1e2430; border-bottom-color: #333; }
-        body.dark-mode .nav-name { color: #e0e0e0; }
-        body.dark-mode .nav-links a { color: #e0e0e0; }
-        body.dark-mode .nav-links a:hover { color: #7a9e8e; }
-        body.dark-mode .theme-toggle { background-color: #2a2a2a; border-color: #444; color: #e0e0e0; }
-        body.dark-mode .theme-toggle:hover { background-color: #7a9e8e; color: white; }
-        body.dark-mode h1 { color: #e0e0e0; }
-        body.dark-mode .year-label { color: #7a9e8e; }
-        body.dark-mode .talk p { color: #b0b0b0; }
-
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
-
-        h1 {
-            font-size: 42px; margin-bottom: 35px;
-            padding-bottom: 12px; border-bottom: 2px solid #7a9e8e;
-            color: #22293a; font-weight: 600;
-        }
-
-        .year-label {
-            font-size: 24px; font-weight: 700;
-            color: #22293a; margin: 35px 0 15px 0;
-        }
-
-        .talk {
-            position: relative;
-            margin-bottom: 28px;
-            padding-left: 35px;
-        }
-
-        .talk::before {
-            content: '';
-            position: absolute;
-            left: 0; top: 12px;
-            width: 14px; height: 14px;
-            background-color: #7a9e8e;
-            border-radius: 50%;
-        }
-
-        .talk p { font-size: 19px; color: #22293a; line-height: 1.8; }
-
-        .talk .venue {
-            font-style: italic;
-            color: #506060;
-            font-size: 17px;
-        }
-
-        .talk a { color: #7a9e8e; text-decoration: none; font-size: 18px; }
-        .talk a:hover { text-decoration: underline; }
-
-        @media (max-width: 768px) {
-            nav { flex-direction: column; gap: 15px; padding: 60px 20px 20px 20px; }
-            .theme-toggle { top: 10px; right: 20px; }
-            .nav-links { gap: 15px; justify-content: center; }
-            .container { padding: 0 20px; }
-            h1 { font-size: 34px; }
-            .talk p { font-size: 17px; }
-        }
+        .masthead, .masthead__inner-wrap, .greedy-nav { background: #22293a !important; border-bottom: none !important; }
+        .masthead a, .masthead .site-title, .greedy-nav a, .greedy-nav .site-title,
+        .greedy-nav .visible-links a, .greedy-nav .visible-links .masthead__menu-item a { color: #f4f5f2 !important; }
+        .greedy-nav a:hover, .greedy-nav .visible-links a:hover { color: #7a9e8e !important; }
+        .greedy-nav .visible-links a:before { background: #7a9e8e !important; }
+        body { background: #f4f5f2 !important; }
+        a { color: #4a7a6a !important; }
+        a:hover { color: #22293a !important; }
+        h1, h2, h3 { color: #22293a !important; }
+        .author__avatar img { border-radius: 50%; }
+        .author__name { color: #22293a !important; }
+        .author__urls a { color: #323d52 !important; }
+        .author__urls a:hover { color: #7a9e8e !important; }
+        .page__footer { background: #22293a !important; }
+        .page__footer-copyright { color: #c5cfc9 !important; }
+        .year-heading { font-size: 1.05em; font-weight: 700; color: #7a9e8e !important; margin: 1.8em 0 0.6em; border-bottom: 1px solid #c5cfc9; padding-bottom: 4px; }
+        .talk-item { margin-bottom: 0.9em; padding: 10px 14px; background: #fff; border-left: 3px solid #7a9e8e; font-size: 0.88em; line-height: 1.65; }
+        .talk-title { font-weight: 600; color: #22293a; }
+        .talk-venue { color: #506060; font-style: italic; margin-top: 2px; }
     </style>
 </head>
-<body>
-    <nav>
-        <button class="theme-toggle" onclick="toggleTheme()">
-            <i class="fas fa-moon" id="theme-icon"></i>
-            <span id="theme-text">Dark Mode</span>
-        </button>
-        <div class="nav-name">Hassan Ou-azzou</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="research.html">Research</a>
-            <a href="talks.html">Talks</a>
-            <a href="cv.html">CV</a>
-            <a href="teaching.html">Teaching</a>
+<body class="layout--single">
+
+<div class="masthead">
+    <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+            <nav id="site-nav" class="greedy-nav">
+                <a class="site-title" href="index.html">Hassan Ou-azzou</a>
+                <ul class="visible-links">
+                    <li class="masthead__menu-item"><a href="research.html">Publications</a></li>
+                    <li class="masthead__menu-item"><a href="talks.html">Talks</a></li>
+                    <li class="masthead__menu-item"><a href="cv.html">CV</a></li>
+                    <li class="masthead__menu-item"><a href="teaching.html">Teaching</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </div>
+</div>
 
-    <div class="container">
-        <h1>Talks &amp; Presentations</h1>
-
-        <div class="year-label">2025</div>
-
-        <div class="talk">
-            <p>On rank equivalence of skew polycyclic codes over finite fields</p>
-            <p class="venue">ICMM-ANTA25, 20–22 November 2025, Fes, Morocco —
-                <a href="https://ens.usmba.ac.ma/Colloque-International/20-22-NOV-2025/" target="_blank" rel="noopener">[Link]</a>
-            </p>
+<div id="main" role="main">
+    <div class="sidebar sticky">
+        <div itemscope itemtype="https://schema.org/Person">
+            <div class="author__avatar">
+                <img src="profile.jpg" alt="Hassan Ou-azzou" itemprop="image">
+            </div>
+            <div class="author__content">
+                <h3 class="author__name" itemprop="name">Hassan Ou-azzou</h3>
+                <div class="author__bio">Postdoctoral Researcher<br>UM6P, Ben Guerir, Morocco</div>
+            </div>
+            <div class="author__urls-wrapper">
+                <ul class="author__urls social-icons">
+                    <li><span><i class="fas fa-fw fa-map-marker-alt"></i> Ben Guerir, Morocco</span></li>
+                    <li><a href="mailto:hassanpfe24@gmail.com"><i class="fas fa-fw fa-envelope"></i> hassanpfe24@gmail.com</a></li>
+                    <li><a href="https://www.researchgate.net/profile/Hassan-Ou-Azzou" target="_blank" rel="noopener"><i class="fab fa-fw fa-researchgate"></i> ResearchGate</a></li>
+                    <li><a href="https://orcid.org/0000-0001-7401-6150" target="_blank" rel="noopener"><i class="fab fa-fw fa-orcid"></i> ORCID</a></li>
+                    <li><a href="https://github.com/ouazzouu" target="_blank" rel="noopener"><i class="fab fa-fw fa-github"></i> GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/hassan-ou-azzou-042560175/" target="_blank" rel="noopener"><i class="fab fa-fw fa-linkedin"></i> LinkedIn</a></li>
+                </ul>
+            </div>
         </div>
-
-        <div class="talk">
-            <p>Bounds and equivalence of skew polycyclic codes over finite fields</p>
-            <p class="venue">NCRA IX, 30 June–3 July 2025, France —
-                <a href="http://leroy.perso.math.cnrs.fr" target="_blank" rel="noopener">[Link]</a>
-            </p>
-        </div>
-
-        <div class="talk">
-            <p>Equivalence of Skew Polycyclic codes over finite fields (Part 2)</p>
-            <p class="venue">19 March 2025, Neuchâtel–St.Gallen–Zurich Seminar in Coding Theory and Cryptography, University of Zürich, Switzerland —
-                <a href="https://www.math.uzh.ch/aa/events" target="_blank" rel="noopener">[Link]</a>
-            </p>
-        </div>
-
-        <div class="talk">
-            <p>Equivalence of Polycyclic codes over finite fields (Part 1)</p>
-            <p class="venue">19 February 2025, Neuchâtel–St.Gallen–Zurich Seminar in Coding Theory and Cryptography, University of Zürich, Switzerland —
-                <a href="https://www.math.uzh.ch/aa/events" target="_blank" rel="noopener">[Link]</a>
-            </p>
-        </div>
-
-        <div class="year-label">2024</div>
-
-        <div class="talk">
-            <p>Structure of skew (M, σ, δ)-codes</p>
-            <p class="venue">10 September 2024, Institute of Computer Sciences, University of St. Gallen, Switzerland</p>
-        </div>
-
-        <div class="year-label">2023</div>
-
-        <div class="talk">
-            <p>On linear codes invariant under cyclic endomorphisms</p>
-            <p class="venue">NCRA VIII, 28–31 August 2023, France —
-                <a href="http://leroy.perso.math.cnrs.fr" target="_blank" rel="noopener">[Link]</a>
-            </p>
-        </div>
-
-        <div class="year-label">2022</div>
-
-        <div class="talk">
-            <p>A class of 1-generator right quasi-polycyclic codes</p>
-            <p class="venue">2nd International Conference on Innovative Research in Applied Science, Engineering and Technology (IRASET'2022), 3–4 March 2022, Faculty of Sciences, Moulay Ismail University, Meknes, Morocco</p>
-        </div>
-
-        <div class="talk">
-            <p>On the algebraic structure of skew cyclic codes with derivation</p>
-            <p class="venue">2nd International Congress on Pure and Applied Sciences, 6–10 June 2022, Faculty of Sciences, Moulay Ismail University, Meknes, Morocco</p>
-        </div>
-
-        <div class="year-label">2021</div>
-
-        <div class="talk">
-            <p>On right polycyclic codes</p>
-            <p class="venue">The Three Days of Differential Geometry, 3–5 November 2021, Faculty of Sciences, Moulay Ismail University, Meknes, Morocco</p>
-        </div>
-
-        <!-- Conferences organised -->
-        <h1 style="margin-top:60px; font-size:32px;">Conference Organisation</h1>
-
-        <div class="talk">
-            <p>Co-organiser of <em>Algebra and its Applications</em>, 28–30 December 2023, National School of Arts and Crafts, Moulay Ismail University, Meknes, Morocco.</p>
-        </div>
-
     </div>
 
-    <script>
-        function toggleTheme() {
-            const body = document.body;
-            const themeIcon = document.getElementById('theme-icon');
-            const themeText = document.getElementById('theme-text');
-            body.classList.toggle('dark-mode');
-            if (body.classList.contains('dark-mode')) {
-                themeIcon.className = 'fas fa-sun';
-                themeText.textContent = 'Light Mode';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                themeIcon.className = 'fas fa-moon';
-                themeText.textContent = 'Dark Mode';
-                localStorage.setItem('theme', 'light');
-            }
-        }
-        window.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
-                document.getElementById('theme-icon').className = 'fas fa-sun';
-                document.getElementById('theme-text').textContent = 'Light Mode';
-            }
-        });
-    </script>
+    <article class="page">
+        <div class="page__inner-wrap">
+            <section class="page__content">
+
+                <h1>Talks &amp; Presentations</h1>
+
+                <div class="year-heading">2025</div>
+
+                <div class="talk-item">
+                    <div class="talk-title">On rank equivalence of skew polycyclic codes over finite fields</div>
+                    <div class="talk-venue">ICMM-ANTA25, 20–22 November 2025, Fes, Morocco — <a href="https://ens.usmba.ac.ma/Colloque-International/20-22-NOV-2025/" target="_blank" rel="noopener">[Link]</a></div>
+                </div>
+
+                <div class="talk-item">
+                    <div class="talk-title">Bounds and equivalence of skew polycyclic codes over finite fields</div>
+                    <div class="talk-venue">NCRA IX, 30 June–3 July 2025, France — <a href="http://leroy.perso.math.cnrs.fr" target="_blank" rel="noopener">[Link]</a></div>
+                </div>
+
+                <div class="talk-item">
+                    <div class="talk-title">Equivalence of Skew Polycyclic codes over finite fields (Part 2)</div>
+                    <div class="talk-venue">19 March 2025, Neuchâtel–St.Gallen–Zurich Seminar in Coding Theory and Cryptography, University of Zürich, Switzerland — <a href="https://www.math.uzh.ch/aa/events" target="_blank" rel="noopener">[Link]</a></div>
+                </div>
+
+                <div class="talk-item">
+                    <div class="talk-title">Equivalence of Polycyclic codes over finite fields (Part 1)</div>
+                    <div class="talk-venue">19 February 2025, Neuchâtel–St.Gallen–Zurich Seminar in Coding Theory and Cryptography, University of Zürich, Switzerland — <a href="https://www.math.uzh.ch/aa/events" target="_blank" rel="noopener">[Link]</a></div>
+                </div>
+
+                <div class="year-heading">2024</div>
+
+                <div class="talk-item">
+                    <div class="talk-title">Structure of skew (M, σ, δ)-codes</div>
+                    <div class="talk-venue">10 September 2024, Institute of Computer Sciences, University of St. Gallen, Switzerland</div>
+                </div>
+
+                <div class="year-heading">2023</div>
+
+                <div class="talk-item">
+                    <div class="talk-title">On linear codes invariant under cyclic endomorphisms</div>
+                    <div class="talk-venue">NCRA VIII, 28–31 August 2023, France — <a href="http://leroy.perso.math.cnrs.fr" target="_blank" rel="noopener">[Link]</a></div>
+                </div>
+
+                <div class="year-heading">2022</div>
+
+                <div class="talk-item">
+                    <div class="talk-title">A class of 1-generator right quasi-polycyclic codes</div>
+                    <div class="talk-venue">IRASET'2022, 3–4 March 2022, Faculty of Sciences, Moulay Ismail University, Meknes, Morocco</div>
+                </div>
+
+                <div class="talk-item">
+                    <div class="talk-title">On the algebraic structure of skew cyclic codes with derivation</div>
+                    <div class="talk-venue">2nd International Congress on Pure and Applied Sciences, 6–10 June 2022, Moulay Ismail University, Meknes, Morocco</div>
+                </div>
+
+                <div class="year-heading">2021</div>
+
+                <div class="talk-item">
+                    <div class="talk-title">On right polycyclic codes</div>
+                    <div class="talk-venue">The Three Days of Differential Geometry, 3–5 November 2021, Faculty of Sciences, Moulay Ismail University, Meknes, Morocco</div>
+                </div>
+
+                <h2 style="margin-top: 2em;">Conference Organisation</h2>
+
+                <div class="talk-item">
+                    <div class="talk-title">Co-organiser — <em>Algebra and its Applications</em></div>
+                    <div class="talk-venue">28–30 December 2023, National School of Arts and Crafts, Moulay Ismail University, Meknes, Morocco</div>
+                </div>
+
+            </section>
+        </div>
+    </article>
+</div>
+
+<div id="footer" class="page__footer">
+    <footer>
+        <div class="page__footer-copyright">&copy; 2026 Hassan Ou-azzou</div>
+    </footer>
+</div>
+
 </body>
 </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
