@@ -7,31 +7,50 @@
     <link rel="stylesheet" href="https://ehbergou.github.io/assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        .author__avatar img { border-radius: 50%; }
+        /* ── Ink & Sage theme ── */
+        .masthead { background: #22293a !important; border-bottom: none !important; }
+        .masthead a, .masthead .site-title,
+        .greedy-nav a, .greedy-nav .site-title { color: #f4f5f2 !important; }
+        .greedy-nav a:hover { color: #7a9e8e !important; }
+        .greedy-nav .visible-links a:before { background: #7a9e8e !important; }
 
+        body { background: #f4f5f2 !important; }
+        a { color: #4a7a6a !important; }
+        a:hover { color: #22293a !important; }
+        h1, h2, h3 { color: #22293a !important; }
+
+        .author__name { color: #22293a !important; }
+        .author__urls a { color: #323d52 !important; }
+        .author__urls a:hover { color: #7a9e8e !important; }
+
+        .page__footer { background: #22293a !important; color: #f4f5f2 !important; }
+        .page__footer-copyright { color: #c5cfc9 !important; }
+
+        /* Publications */
+        .author__avatar img { border-radius: 50%; }
         .pub-list { list-style: none; padding: 0; margin: 0 0 32px; }
         .pub-list li {
             margin-bottom: 14px;
             padding: 12px 14px;
-            background: #f9f9f9;
-            border-left: 3px solid #6f777d;
+            background: #ffffff;
+            border-left: 3px solid #7a9e8e;
             font-size: 0.88em;
             line-height: 1.6;
         }
-        .pub-title { font-weight: 700; font-style: italic; }
-        .pub-journal { color: #444; }
+        .pub-title { font-weight: 700; font-style: italic; color: #22293a; }
+        .pub-journal { color: #323d52; }
         .pub-links { margin-top: 4px; }
         .pub-links a {
-            color: #0066cc;
+            color: #4a7a6a;
             text-decoration: none;
             margin-right: 10px;
             font-size: 0.9em;
         }
-        .pub-links a:hover { text-decoration: underline; }
+        .pub-links a:hover { text-decoration: underline; color: #22293a; }
         .pub-tag {
             display: inline-block;
-            background: #e8f0fe;
-            color: #1a56db;
+            background: #e4eeea;
+            color: #22293a;
             font-size: 0.78em;
             padding: 1px 7px;
             border-radius: 10px;
@@ -94,6 +113,9 @@
                         M. Bajalan, E. Martinez-Moro, <strong>H. Ou-azzou</strong>.
                         <span class="pub-title">Skew polycyclic codes over finite chain rings associated to trinomials</span>.
                         <span class="pub-journal">Preprint, 2025.</span>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.48550/arXiv.2605.03164" target="_blank">[link to preprint]</a>
+                        </div>
                     </li>
 
                     <li>
@@ -101,7 +123,7 @@
                         <span class="pub-title">Bounds and equivalence of skew polycyclic codes over finite fields</span>.
                         <span class="pub-journal">Preprint, 2025.</span>
                         <div class="pub-links">
-                            <a href="http://dx.doi.org/10.48550/arXiv.2507.17571" target="_blank">[arXiv]</a>
+                            <a href="http://dx.doi.org/10.48550/arXiv.2507.17571" target="_blank">[link to preprint]</a>
                         </div>
                     </li>
 
@@ -110,7 +132,7 @@
                         <span class="pub-title">On polycyclic codes associated to a trinomial over a finite chain ring</span>.
                         <span class="pub-journal">Preprint, 2025.</span>
                         <div class="pub-links">
-                            <a href="http://dx.doi.org/10.48550/arXiv.2503.11765" target="_blank">[arXiv]</a>
+                            <a href="http://dx.doi.org/10.48550/arXiv.2503.11765" target="_blank">[link to preprint]</a>
                         </div>
                     </li>
 
@@ -131,8 +153,8 @@
                         <span class="pub-title">Equivalence of classes of polycyclic codes over finite fields</span>.
                         <span class="pub-journal"><em>Discrete Mathematics</em>, 2026.</span>
                         <div class="pub-links">
-                            <a href="http://arxiv.org/abs/2503.04498" target="_blank">[arXiv]</a>
-                            <a href="https://doi.org/10.1016/j.disc.2026.115234" target="_blank">[Journal]</a>
+                            <a href="http://arxiv.org/abs/2503.04498" target="_blank">[link to preprint]</a>
+                            <a href="https://doi.org/10.1016/j.disc.2026.115234" target="_blank">[link to paper]</a>
                         </div>
                     </li>
 
@@ -141,7 +163,7 @@
                         <span class="pub-title">On Metacyclic Twisted Codes</span>.
                         <span class="pub-journal"><em>Discrete Mathematics</em>, 2026.</span>
                         <div class="pub-links">
-                            <a href="https://doi.org/10.1016/j.disc.2026.115201" target="_blank">[Journal]</a>
+                            <a href="https://doi.org/10.1016/j.disc.2026.115201" target="_blank">[link to paper]</a>
                         </div>
                     </li>
 
@@ -150,7 +172,7 @@
                         <span class="pub-title">On isometry and equivalence of constacyclic codes over finite chain rings</span>.
                         <span class="pub-journal"><em>Cryptography and Communications</em>, 2025.</span>
                         <div class="pub-links">
-                            <a href="https://link.springer.com/article/10.1007/s12095-024-00758-3" target="_blank">[Journal]</a>
+                            <a href="https://link.springer.com/article/10.1007/s12095-024-00758-3" target="_blank">[link to paper]</a>
                         </div>
                     </li>
 
@@ -159,7 +181,7 @@
                         <span class="pub-title">On isometry and equivalence of skew constacyclic codes</span>.
                         <span class="pub-journal"><em>Discrete Mathematics</em>, 2025.</span>
                         <div class="pub-links">
-                            <a href="http://dx.doi.org/10.1016/j.disc.2024.114279" target="_blank">[Journal]</a>
+                            <a href="http://dx.doi.org/10.1016/j.disc.2024.114279" target="_blank">[link to paper]</a>
                         </div>
                     </li>
 
@@ -168,7 +190,7 @@
                         <span class="pub-title">On the algebraic structure of (M, σ, δ)-skew codes</span>.
                         <span class="pub-journal"><em>Journal of Algebra</em>, 2024.</span>
                         <div class="pub-links">
-                            <a href="https://doi.org/10.1016/j.jalgebra.2023.09.014" target="_blank">[Journal]</a>
+                            <a href="https://doi.org/10.1016/j.jalgebra.2023.09.014" target="_blank">[link to paper]</a>
                         </div>
                     </li>
 
@@ -177,7 +199,7 @@
                         <span class="pub-title">Linear codes invariant under cyclic endomorphisms</span>.
                         <span class="pub-journal"><em>Journal of Algebra and its Applications</em>, 2024.</span>
                         <div class="pub-links">
-                            <a href="https://doi.org/10.1142/S0219498825500653" target="_blank">[Journal]</a>
+                            <a href="https://doi.org/10.1142/S0219498825500653" target="_blank">[link to paper]</a>
                         </div>
                     </li>
 
@@ -186,7 +208,7 @@
                         <span class="pub-title">On the structure of quasi T-cyclic codes</span>.
                         <span class="pub-journal"><em>Discrete Mathematics, Algorithms and Applications</em>, 2024.</span>
                         <div class="pub-links">
-                            <a href="https://www.worldscientific.com/doi/10.1142/S1793830924500691" target="_blank">[Journal]</a>
+                            <a href="https://www.worldscientific.com/doi/10.1142/S1793830924500691" target="_blank">[link to paper]</a>
                         </div>
                     </li>
 
@@ -195,7 +217,7 @@
                         <span class="pub-title">A class of skew constacyclic codes over ℤ₄+uℤ₄ with derivation</span>.
                         <span class="pub-journal"><em>Discrete Mathematics, Algorithms and Applications</em>, 2024.</span>
                         <div class="pub-links">
-                            <a href="https://www.worldscientific.com/doi/10.1142/S1793830924501271" target="_blank">[Journal]</a>
+                            <a href="https://www.worldscientific.com/doi/10.1142/S1793830924501271" target="_blank">[link to paper]</a>
                         </div>
                     </li>
 
@@ -204,7 +226,7 @@
                         <span class="pub-title">Linear codes invariant under a linear transformation</span>.
                         <span class="pub-journal"><em>Advances in Mathematics of Communications</em>, 2024.</span>
                         <div class="pub-links">
-                            <a href="https://www.aimsciences.org//article/doi/10.3934/amc.2024018" target="_blank">[Journal]</a>
+                            <a href="https://www.aimsciences.org//article/doi/10.3934/amc.2024018" target="_blank">[link to paper]</a>
                         </div>
                     </li>
 
@@ -213,7 +235,7 @@
                         <span class="pub-title">On the algebraic structure of quasi-polycyclic codes and new quantum codes</span>.
                         <span class="pub-journal"><em>Quantum Information Processing</em>, 2024.</span>
                         <div class="pub-links">
-                            <a href="https://link.springer.com/article/10.1007/s11128-024-04304-1" target="_blank">[Journal]</a>
+                            <a href="https://link.springer.com/article/10.1007/s11128-024-04304-1" target="_blank">[link to paper]</a>
                         </div>
                     </li>
 
@@ -222,7 +244,7 @@
                         <span class="pub-title">On monomial codes and their generalizations</span>.
                         <span class="pub-journal"><em>Journal of Algebra Combinatorics Discrete Structures and Applications</em>, 2022.</span>
                         <div class="pub-links">
-                            <a href="https://jacodesmath.com/index.php/jacodesmath/article/view/247" target="_blank">[Journal]</a>
+                            <a href="https://jacodesmath.com/index.php/jacodesmath/article/view/247" target="_blank">[link to paper]</a>
                         </div>
                     </li>
 
@@ -231,7 +253,7 @@
                         <span class="pub-title">On the algebraic structure of polycyclic codes</span>.
                         <span class="pub-journal"><em>Filomat</em>, 2021.</span>
                         <div class="pub-links">
-                            <a href="https://doiserbia.nb.rs/Article.aspx?ID=0354-51802110407O" target="_blank">[Journal]</a>
+                            <a href="https://doiserbia.nb.rs/Article.aspx?ID=0354-51802110407O" target="_blank">[link to paper]</a>
                         </div>
                     </li>
 
@@ -245,33 +267,4 @@
                         <strong>H. Ou-azzou</strong>, B. Ialou, E. Mouloua.
                         <span class="pub-title">A class of 1-generator right quasi-polycyclic codes</span>.
                         <span class="pub-journal"><em>IRASET</em>, 2022.</span>
-                        <div class="pub-links">
-                            <a href="https://ieeexplore.ieee.org/document/9738244" target="_blank">[Journal]</a>
-                        </div>
-                    </li>
-
-                    <li>
-                        E. Mouloua, M. Najmeddine, <strong>H. Ou-azzou</strong>.
-                        <span class="pub-title">Around the parameters of primitive BCH codes</span>.
-                        <span class="pub-journal"><em>IRASET</em>, 2022.</span>
-                        <div class="pub-links">
-                            <a href="https://ieeexplore.ieee.org/document/9737805" target="_blank">[Journal]</a>
-                        </div>
-                    </li>
-
-                </ul>
-
-            </section>
-        </div>
-    </article>
-</div>
-
-<div id="footer" class="page__footer">
-    <footer>
-        <div class="page__footer-copyright">&copy; 2026 Hassan Ou-azzou</div>
-    </footer>
-</div>
-
-</body>
-</html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                        <div

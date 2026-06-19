@@ -10,7 +10,29 @@
     <link rel="stylesheet" href="https://ehbergou.github.io/assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        /* Small overrides */
+        /* ── Ink & Sage theme ── */
+        .masthead { background: #22293a !important; border-bottom: none !important; }
+        .masthead a, .masthead .site-title,
+        .greedy-nav a, .greedy-nav .site-title { color: #f4f5f2 !important; }
+        .greedy-nav a:hover { color: #7a9e8e !important; }
+        .greedy-nav .visible-links a:before { background: #7a9e8e !important; }
+
+        body { background: #f4f5f2 !important; }
+
+        a { color: #4a7a6a !important; }
+        a:hover { color: #22293a !important; }
+
+        h1, h2, h3 { color: #22293a !important; }
+
+        .author__name { color: #22293a !important; }
+        .author__urls a { color: #323d52 !important; }
+        .author__urls a:hover { color: #7a9e8e !important; }
+
+        .page__footer { background: #22293a !important; color: #f4f5f2 !important; }
+        .page__footer a { color: #7a9e8e !important; }
+        .page__footer-copyright { color: #c5cfc9 !important; }
+
+        /* Research table */
         .author__avatar img { border-radius: 50%; }
         .research-table {
             width: 100%;
@@ -21,13 +43,13 @@
         .research-table td {
             padding: 10px 14px;
             vertical-align: top;
-            border: 1px solid #ddd;
+            border: 1px solid #c5cfc9;
         }
         .research-table td:first-child {
             font-weight: 700;
             white-space: nowrap;
-            background: #f4f4f4;
-            color: #333;
+            background: #e4eeea;
+            color: #22293a;
             width: 140px;
         }
     </style>
@@ -150,19 +172,4 @@
                             <td>Algebra &amp; Finite<br>Fields and rings</td>
                             <td>Classification of semifields; isotopies between semifields; factorization of polynomials
                             and skew polynomials over finite fields (rings); applications to coding theory and
-                            cryptography.</td>
-                        </tr>
-                        <tr>
-                            <td>Coding Theory</td>
-                            <td>Equivalence and isometry (Hamming and rank metrics) of polycyclic and skew codes;
-                            construction of linear and CSS quantum codes; skew LDPC and convolutional codes;
-                            cyclic and quasi-cyclic structures (polycyclic, constacyclic, quasi-twisted codes).</td>
-                        </tr>
-                        <tr>
-                            <td>Cryptography</td>
-                            <td>Code-based post-quantum cryptosystems; cyclic code structures beyond the classical
-                            quasi-cyclic framework (BIKE-type schemes).</td>
-                        </tr>
-                        <tr>
-                            <td>Distributed<br>Computing</td>
-                            <td>Polynomial codes for distributed machine learning,
+                            cryptograph

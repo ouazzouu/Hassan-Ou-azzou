@@ -11,8 +11,8 @@
         body {
             font-family: 'Courier New', Courier, monospace;
             line-height: 1.8;
-            color: #003366;
-            background-color: #f5f5dc;
+            color: #22293a;
+            background-color: #f4f5f2;
             font-size: 18px;
             padding: 20px;
         }
@@ -22,50 +22,50 @@
             justify-content: center;
             align-items: center;
             padding: 40px 40px 20px 40px;
-            background-color: #f5f5dc;
-            border-bottom: 2px solid #d4d4b8;
+            background-color: #f4f5f2;
+            border-bottom: 2px solid #c5cfc9;
             margin-bottom: 50px;
             gap: 40px;
             position: relative;
         }
 
-        .nav-name { font-size: 28px; font-weight: 700; color: #24292e; white-space: nowrap; }
+        .nav-name { font-size: 28px; font-weight: 700; color: #22293a; white-space: nowrap; }
         .nav-links { display: flex; gap: 40px; flex-wrap: wrap; list-style: none; align-items: center; }
-        .nav-links a { text-decoration: none; color: #003366; font-weight: 500; font-size: 20px; transition: color 0.3s; }
-        .nav-links a:hover { color: #dc3545; }
+        .nav-links a { text-decoration: none; color: #22293a; font-weight: 500; font-size: 20px; transition: color 0.3s; }
+        .nav-links a:hover { color: #7a9e8e; }
 
         .theme-toggle {
             position: absolute; top: 20px; right: 40px;
-            background-color: #ebe8d8; border: 2px solid #d4d4b8;
+            background-color: #e4eeea; border: 2px solid #c5cfc9;
             border-radius: 25px; padding: 8px 16px; cursor: pointer;
-            font-size: 16px; color: #003366; font-weight: 500;
+            font-size: 16px; color: #22293a; font-weight: 500;
             transition: all 0.3s; display: flex; align-items: center; gap: 8px;
         }
-        .theme-toggle:hover { background-color: #dc3545; color: white; border-color: #dc3545; }
+        .theme-toggle:hover { background-color: #7a9e8e; color: white; border-color: #7a9e8e; }
 
         /* Dark mode */
-        body.dark-mode { background-color: #1a1a1a; color: #e0e0e0; }
-        body.dark-mode nav { background-color: #1a1a1a; border-bottom-color: #333; }
+        body.dark-mode { background-color: #1e2430; color: #e0e0e0; }
+        body.dark-mode nav { background-color: #1e2430; border-bottom-color: #333; }
         body.dark-mode .nav-name { color: #e0e0e0; }
         body.dark-mode .nav-links a { color: #e0e0e0; }
-        body.dark-mode .nav-links a:hover { color: #dc3545; }
+        body.dark-mode .nav-links a:hover { color: #7a9e8e; }
         body.dark-mode .theme-toggle { background-color: #2a2a2a; border-color: #444; color: #e0e0e0; }
-        body.dark-mode .theme-toggle:hover { background-color: #dc3545; color: white; }
+        body.dark-mode .theme-toggle:hover { background-color: #7a9e8e; color: white; }
         body.dark-mode h1 { color: #e0e0e0; }
-        body.dark-mode .year-label { color: #dc3545; }
+        body.dark-mode .year-label { color: #7a9e8e; }
         body.dark-mode .talk p { color: #b0b0b0; }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 
         h1 {
             font-size: 42px; margin-bottom: 35px;
-            padding-bottom: 12px; border-bottom: 2px solid #dc3545;
-            color: #24292e; font-weight: 600;
+            padding-bottom: 12px; border-bottom: 2px solid #7a9e8e;
+            color: #22293a; font-weight: 600;
         }
 
         .year-label {
             font-size: 24px; font-weight: 700;
-            color: #24292e; margin: 35px 0 15px 0;
+            color: #22293a; margin: 35px 0 15px 0;
         }
 
         .talk {
@@ -79,19 +79,19 @@
             position: absolute;
             left: 0; top: 12px;
             width: 14px; height: 14px;
-            background-color: #dc3545;
+            background-color: #7a9e8e;
             border-radius: 50%;
         }
 
-        .talk p { font-size: 19px; color: #003366; line-height: 1.8; }
+        .talk p { font-size: 19px; color: #22293a; line-height: 1.8; }
 
         .talk .venue {
             font-style: italic;
-            color: #555;
+            color: #506060;
             font-size: 17px;
         }
 
-        .talk a { color: #dc3545; text-decoration: none; font-size: 18px; }
+        .talk a { color: #7a9e8e; text-decoration: none; font-size: 18px; }
         .talk a:hover { text-decoration: underline; }
 
         @media (max-width: 768px) {
