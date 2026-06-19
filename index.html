@@ -43,26 +43,12 @@
 
         .author__avatar img { border-radius: 50%; }
 
-        .page__content, .page__content p,
-        .page__content div { color: #22293a !important; }
+        .page__content p { color: #22293a !important; }
 
-        .ri-item {
-            display: block !important;
-            margin-bottom: 1em !important;
-            padding-left: 1em !important;
-            border-left: 3px solid #7a9e8e !important;
-            overflow: visible !important;
-        }
-        .ri-label {
-            display: block !important;
-            font-weight: 700 !important;
-            color: #22293a !important;
-            margin-bottom: 3px !important;
-        }
-        .ri-desc {
-            display: block !important;
-            color: #323d52 !important;
-            line-height: 1.65 !important;
+        .ri-block {
+            border-left: 3px solid #7a9e8e;
+            padding-left: 1em;
+            margin-bottom: 1em;
         }
     </style>
 </head>
@@ -178,5 +164,6 @@
 
                 <h2 id="research-interests">Research Interests</h2>
 
-                <div class="ri-item">
-                    <div class="ri-label">
+                <p class="ri-block"><strong>Algebra &amp; Finite Fields and rings.</strong> Classification of semifields; isotopies between semifields; factorization of polynomials and skew polynomials over finite fields (rings); applications to coding theory and cryptography.</p>
+
+                <p class="ri-block"><strong>Coding Theory.</strong> Equivalence and isometry (Hamming and rank metrics) of polycyclic and skew codes; construction of linear and CSS quantum codes; skew LDPC and convolutional codes; cyclic and quasi-cyclic structures (polycyclic, constacyclic, qu
