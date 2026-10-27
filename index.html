@@ -3,142 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hassan Ou-azzou</title>
-    <meta name="description" content="Hassan Ou-azzou — Postdoctoral Researcher in algebraic coding theory and post-quantum cryptography at Mohammed VI Polytechnic University (UM6P).">
+
+    <title>Hassan Ou-azzou — Postdoctoral Researcher in Coding Theory &amp; Post-Quantum Cryptography</title>
+    <meta name="description" content="Hassan Ou-azzou is a postdoctoral researcher at Mohammed VI Polytechnic University (UM6P), Morocco, working on algebraic coding theory, finite fields, post-quantum cryptography, and coded distributed computing.">
+    <meta name="author" content="Hassan Ou-azzou">
+    <meta name="keywords" content="Hassan Ou-azzou, Ou-azzou, coding theory, algebraic coding theory, finite fields, post-quantum cryptography, polycyclic codes, skew codes, quantum codes, code-based cryptography, UM6P, mathematician, Morocco">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ouazzouu.github.io/Hassan-Ou-azzou/index.html">
+
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Hassan Ou-azzou — Postdoctoral Researcher in Coding Theory &amp; Cryptography">
+    <meta property="og:description" content="Research in algebraic coding theory, finite fields, post-quantum cryptography, and coded distributed computing.">
+    <meta property="og:url" content="https://ouazzouu.github.io/Hassan-Ou-azzou/">
+    <meta property="og:image" content="https://ouazzouu.github.io/Hassan-Ou-azzou/profile.jpg">
+    <meta property="profile:first_name" content="Hassan">
+    <meta property="profile:last_name" content="Ou-azzou">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hassan Ou-azzou — Coding Theory &amp; Cryptography Researcher">
+    <meta name="twitter:description" content="Postdoctoral researcher in algebraic coding theory and post-quantum cryptography at UM6P, Morocco.">
+    <meta name="twitter:image" content="https://ouazzouu.github.io/Hassan-Ou-azzou/profile.jpg">
+
+    <!--
+      GOOGLE SEARCH CONSOLE: after you add this site in Search Console using the
+      "HTML tag" method, paste the <meta name="google-site-verification" ...> tag
+      Google gives you on the line right below this comment, then re-upload the file.
+    -->
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%2322293a'/><text x='32' y='44' font-size='34' text-anchor='middle' fill='%237a9e8e' font-family='Georgia,serif'>H</text></svg>">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: #f4f5f2;
-            color: #22293a;
-            line-height: 1.7;
-            font-size: 16px;
-        }
-
-        /* NAV */
-        nav {
-            background: #22293a;
-            padding: 0 2em;
-            display: flex;
-            align-items: center;
-            height: 56px;
-        }
-        .nav-title {
-            color: #f4f5f2;
-            font-size: 1.1em;
-            font-weight: 600;
-            text-decoration: none;
-            margin-right: auto;
-        }
-        .nav-links { display: flex; gap: 1.5em; list-style: none; }
-        .nav-links a {
-            color: #f4f5f2;
-            text-decoration: none;
-            font-size: 0.9em;
-            transition: color 0.2s;
-        }
-        .nav-links a:hover { color: #7a9e8e; }
-
-        /* LAYOUT */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 2.5em 2em;
-            display: flex;
-            gap: 3em;
-            align-items: flex-start;
-        }
-
-        /* SIDEBAR */
-        .sidebar {
-            width: 220px;
-            flex-shrink: 0;
-        }
-        .sidebar img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-            margin-bottom: 1em;
-        }
-        .sidebar-name {
-            font-size: 1.05em;
-            font-weight: 700;
-            color: #22293a;
-            margin-bottom: 0.2em;
-        }
-        .sidebar-bio {
-            font-size: 0.85em;
-            color: #506060;
-            margin-bottom: 1em;
-        }
-        .sidebar-links { list-style: none; }
-        .sidebar-links li {
-            font-size: 0.82em;
-            margin-bottom: 0.5em;
-            color: #323d52;
-        }
-        .sidebar-links a {
-            color: #4a7a6a;
-            text-decoration: none;
-        }
-        .sidebar-links a:hover { color: #22293a; }
-        .sidebar-links i { width: 18px; }
-
-        /* MAIN CONTENT */
-        .content { flex: 1; min-width: 0; }
-
-        .content p {
-            color: #22293a;
-            margin-bottom: 1em;
-            font-size: 0.92em;
-        }
-
-        .content a { color: #4a7a6a; text-decoration: none; }
-        .content a:hover { text-decoration: underline; }
-
-        h2 {
-            font-size: 1.25em;
-            color: #22293a;
-            margin: 1.8em 0 1em;
-            padding-bottom: 0.3em;
-            border-bottom: 1px solid #c5cfc9;
-        }
-
-        .ri-item {
-            border-left: 3px solid #7a9e8e;
-            padding-left: 1em;
-            margin-bottom: 1em;
-            font-size: 0.9em;
-            color: #22293a;
-        }
-        .ri-item strong { color: #22293a; }
-
-        /* FOOTER */
-        footer {
-            background: #22293a;
-            color: #c5cfc9;
-            text-align: center;
-            padding: 1.2em;
-            font-size: 0.82em;
-            margin-top: 3em;
-        }
-
-        @media (max-width: 700px) {
-            .container { flex-direction: column; }
-            .sidebar { width: 100%; display: flex; gap: 1.5em; align-items: flex-start; }
-            .sidebar img { width: 100px; height: 100px; margin-bottom: 0; }
-        }
-    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Hassan Ou-azzou",
+      "givenName": "Hassan",
+      "familyName": "Ou-azzou",
+      "jobTitle": "Postdoctoral Researcher",
+      "email": "mailto:hassanpfe24@gmail.com",
+      "url": "https://ouazzouu.github.io/Hassan-Ou-azzou/",
+      "image": "https://ouazzouu.github.io/Hassan-Ou-azzou/profile.jpg",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Mohammed VI Polytechnic University (UM6P)",
+        "url": "https://www.um6p.ma/"
+      },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Moulay Ismail University" },
+        { "@type": "CollegeOrUniversity", "name": "University of St. Gallen" }
+      ],
+      "knowsAbout": [
+        "Algebraic Coding Theory",
+        "Finite Fields",
+        "Post-Quantum Cryptography",
+        "Polycyclic Codes",
+        "Skew Codes",
+        "Quantum Codes",
+        "Code-Based Cryptography",
+        "Coded Distributed Computing"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ben Guerir",
+        "addressCountry": "Morocco"
+      },
+      "sameAs": [
+        "https://orcid.org/0000-0001-7401-6150",
+        "https://www.researchgate.net/profile/Hassan-Ou-Azzou",
+        "https://github.com/ouazzouu",
+        "https://www.linkedin.com/in/hassan-ou-azzou-042560175/"
+      ]
+    }
+    </script>
 </head>
 <body>
 
-<nav>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="site-nav">
     <a class="nav-title" href="index.html">Hassan Ou-azzou</a>
     <ul class="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="research.html">Publications</a></li>
         <li><a href="talks.html">Talks</a></li>
         <li><a href="cv.html">CV</a></li>
@@ -149,44 +96,47 @@
 <div class="container">
 
     <!-- Sidebar -->
-    <div class="sidebar">
-        <img src="profile.jpg" alt="Hassan Ou-azzou">
+    <aside class="sidebar">
+        <img src="profile.jpg" alt="Portrait of Hassan Ou-azzou">
         <div class="sidebar-name">Hassan Ou-azzou</div>
         <div class="sidebar-bio">Postdoctoral Researcher<br>UM6P, Ben Guerir, Morocco</div>
         <ul class="sidebar-links">
             <li><i class="fas fa-fw fa-map-marker-alt"></i> Ben Guerir, Morocco</li>
             <li><a href="mailto:hassanpfe24@gmail.com"><i class="fas fa-fw fa-envelope"></i> hassanpfe24@gmail.com</a></li>
-            <li><a href="https://www.researchgate.net/profile/Hassan-Ou-Azzou" target="_blank"><i class="fab fa-fw fa-researchgate"></i> ResearchGate</a></li>
-            <li><a href="https://orcid.org/0000-0001-7401-6150" target="_blank"><i class="fab fa-fw fa-orcid"></i> ORCID</a></li>
-            <li><a href="https://github.com/ouazzouu" target="_blank"><i class="fab fa-fw fa-github"></i> GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/hassan-ou-azzou-042560175/" target="_blank"><i class="fab fa-fw fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href="https://www.researchgate.net/profile/Hassan-Ou-Azzou" target="_blank" rel="noopener"><i class="fab fa-fw fa-researchgate"></i> ResearchGate</a></li>
+            <li><a href="https://orcid.org/0000-0001-7401-6150" target="_blank" rel="noopener"><i class="fab fa-fw fa-orcid"></i> ORCID</a></li>
+            <li><a href="https://github.com/ouazzouu" target="_blank" rel="noopener"><i class="fab fa-fw fa-github"></i> GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/hassan-ou-azzou-042560175/" target="_blank" rel="noopener"><i class="fab fa-fw fa-linkedin"></i> LinkedIn</a></li>
         </ul>
-    </div>
+    </aside>
 
     <!-- Main content -->
-    <div class="content">
+    <main class="content" id="main">
+
+        <h1>Hassan Ou-azzou</h1>
+        <p class="subtitle">Postdoctoral Researcher in Algebraic Coding Theory &amp; Post-Quantum Cryptography</p>
 
         <p>
             I am a Postdoctoral Researcher at the
-            <a href="https://www.um6p.ma/" target="_blank">Mohammed VI Polytechnic University (UM6P)</a>,
+            <a href="https://www.um6p.ma/" target="_blank" rel="noopener">Mohammed VI Polytechnic University (UM6P)</a>,
             Ben Guerir, Morocco, where I have been working on coded distributed computing and
             high-performance computing since February 2026.
         </p>
 
         <p>
             Prior to this, I held a <strong>Swiss Government Excellence Postdoctoral Fellowship</strong> at the
-            <a href="https://www.unisg.ch/" target="_blank">University of St. Gallen</a>, Switzerland (2024–2025),
+            <a href="https://www.unisg.ch/" target="_blank" rel="noopener">University of St. Gallen</a>, Switzerland (2024–2025),
             where I worked on coding theory and post-quantum cryptography under the supervision of
-            <a href="https://www.unisg.ch/en/university/schools/school-of-computer-science/researchers/horlemann-anna-lena/" target="_blank">Prof. Anna-Lena Horlemann</a>
-            and <a href="https://user.math.uzh.ch/rosenthal/" target="_blank">Prof. Joachim Rosenthal</a>.
+            <a href="https://www.unisg.ch/en/university/schools/school-of-computer-science/researchers/horlemann-anna-lena/" target="_blank" rel="noopener">Prof. Anna-Lena Horlemann</a>
+            and <a href="https://user.math.uzh.ch/rosenthal/" target="_blank" rel="noopener">Prof. Joachim Rosenthal</a>.
         </p>
 
         <p>
             I completed my PhD in Mathematics in 2023 at
-            <a href="http://www.umi.ac.ma/" target="_blank">Moulay Ismail University</a>
+            <a href="http://www.umi.ac.ma/" target="_blank" rel="noopener">Moulay Ismail University</a>
             (ENSAM, Meknes, Morocco), under the supervision of
             <a href="mailto:m.najmeddine@umi.ac.ma">Prof. Mustapha Najmeddine</a>
-            and in collaboration with <a href="https://www2.kenyon.edu/Depts/Math/Aydin/" target="_blank">Prof. Nuh Aydin</a>.
+            and in collaboration with <a href="https://www2.kenyon.edu/Depts/Math/Aydin/" target="_blank" rel="noopener">Prof. Nuh Aydin</a>.
             My doctoral research focused on the <em>algebraic structure of linear codes invariant
             under linear and pseudo-linear transformations</em>.
         </p>
@@ -194,7 +144,7 @@
         <h2>Research Interests</h2>
 
         <div class="ri-item">
-            <strong>Algebra &amp; Finite Fields and rings.</strong>
+            <strong>Algebra, Finite Fields &amp; Rings.</strong>
             Classification of semifields; isotopies between semifields; factorization of polynomials
             and skew polynomials over finite fields (rings); applications to coding theory and cryptography.
         </div>
@@ -216,4 +166,17 @@
             <strong>Distributed Computing.</strong>
             Polynomial codes for distributed machine learning, deep learning, and distributed
             matrix multiplication.
-      
+        </div>
+
+    </main>
+
+</div>
+
+<footer class="site-footer">
+    &copy; 2026 Hassan Ou-azzou &middot;
+    <a href="https://orcid.org/0000-0001-7401-6150" target="_blank" rel="noopener">ORCID</a> &middot;
+    <a href="mailto:hassanpfe24@gmail.com">Email</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+/* =========================================================
+   Hassan Ou-azzou — personal academic website
+   Shared stylesheet ("Ink & Sage" theme), self-hosted.
+   ========================================================= */
+
+:root {
+    --ink:    #22293a;   /* dark navy  */
+    --ink-2:  #323d52;
+    --sage:   #7a9e8e;   /* accent     */
+    --sage-d: #4a7a6a;
+    --paper:  #f4f5f2;   /* page bg    */
+    --muted:  #506060;
+    --line:   #c5cfc9;
+    --card:   #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Skip link (accessibility) ---- */
+.skip-link {
+    position: absolute; left: -999px; top: 0;
+    background: var(--ink); color: #fff; padding: 10px 16px; z-index: 1000;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+
+/* ---- NAV ---- */
+nav.site-nav {
+    background: var(--ink);
+    padding: 0 2em;
+    display: flex;
+    align-items: center;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: wrap;
+}
+.nav-title {
+    color: var(--paper);
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: auto;
+}
+.nav-links { display: flex; gap: 1.4em; list-style: none; flex-wrap: wrap; }
+.nav-links a {
+    color: var(--paper);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.2s;
+}
+.nav-links a:hover,
+.nav-links a[aria-current="page"] { color: var(--sage); }
+
+/* ---- LAYOUT ---- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5em 2em;
+    display: flex;
+    gap: 3em;
+    align-items: flex-start;
+}
+
+/* ---- SIDEBAR ---- */
+.sidebar { width: 230px; flex-shrink: 0; position: sticky; top: 80px; }
+.sidebar img {
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 1em;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 10px rgba(34,41,58,0.12);
+}
+.sidebar-name { font-size: 1.1em; font-weight: 700; color: var(--ink); margin-bottom: 0.2em; }
+.sidebar-bio { font-size: 0.85em; color: var(--muted); margin-bottom: 1em; }
+.sidebar-links { list-style: none; }
+.sidebar-links li { font-size: 0.82em; margin-bottom: 0.5em; color: var(--ink-2); }
+.sidebar-links a { color: var(--sage-d); text-decoration: none; }
+.sidebar-links a:hover { color: var(--ink); }
+.sidebar-links i { width: 18px; text-align: center; }
+
+/* ---- MAIN CONTENT ---- */
+.content { flex: 1; min-width: 0; }
+.content p { color: var(--ink); margin-bottom: 1em; font-size: 0.95em; }
+.content a { color: var(--sage-d); text-decoration: none; }
+.content a:hover { text-decoration: underline; color: var(--ink); }
+
+h1 {
+    font-size: 1.9em;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 0.15em;
+}
+.subtitle { color: var(--muted); font-size: 1.02em; margin-bottom: 1.4em; }
+
+h2 {
+    font-size: 1.25em;
+    color: var(--ink);
+    margin: 1.8em 0 1em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--line);
+}
+
+/* ---- Research-interest blocks ---- */
+.ri-item {
+    border-left: 3px solid var(--sage);
+    padding: 2px 0 2px 1em;
+    margin-bottom: 1em;
+    font-size: 0.92em;
+    color: var(--ink);
+}
+
+/* ---- Card lists (publications, talks, cv, teaching) ---- */
+.card-list { list-style: none; padding: 0; margin: 0 0 2em; }
+.card-list li,
+.card {
+    margin-bottom: 14px;
+    padding: 12px 16px;
+    background: var(--card);
+    border-left: 3px solid var(--sage);
+    border-radius: 2px;
+    font-size: 0.9em;
+    line-height: 1.6;
+    box-shadow: 0 1px 4px rgba(34,41,58,0.05);
+}
+.pub-title  { font-weight: 700; font-style: italic; color: var(--ink); }
+.pub-journal { color: var(--ink-2); }
+.pub-links { margin-top: 5px; }
+.pub-links a { color: var(--sage-d); text-decoration: none; margin-right: 12px; font-size: 0.92em; }
+.pub-links a:hover { text-decoration: underline; color: var(--ink); }
+
+.card-title   { font-weight: 600; color: var(--ink); }
+.card-detail  { color: var(--muted); margin-top: 2px; }
+.card-detail em { font-style: italic; }
+.card-venue   { color: var(--muted); font-style: italic; margin-top: 2px; }
+
+.year-heading {
+    font-size: 1.05em; font-weight: 700; color: var(--sage-d);
+    margin: 1.8em 0 0.6em; border-bottom: 1px solid var(--line); padding-bottom: 4px;
+}
+
+.pub-tag {
+    display: inline-block; background: #e4eeea; color: var(--ink);
+    font-size: 0.78em; padding: 1px 8px; border-radius: 10px; margin-right: 6px;
+}
+
+.btn {
+    display: inline-block; background: var(--sage-d); color: #fff !important;
+    padding: 7px 16px; border-radius: 4px; text-decoration: none !important;
+    font-size: 0.9em; margin-bottom: 1em;
+}
+.btn:hover { background: var(--ink); }
+
+/* ---- FOOTER ---- */
+footer.site-footer {
+    background: var(--ink);
+    color: var(--line);
+    text-align: center;
+    padding: 1.4em;
+    font-size: 0.82em;
+    margin-top: 3em;
+}
+footer.site-footer a { color: var(--sage); text-decoration: none; }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 760px) {
+    .container { flex-direction: column; padding: 1.6em 1.2em; gap: 1.8em; }
+    .sidebar { width: 100%; position: static; display: flex; gap: 1.3em; align-items: flex-start; }
+    .sidebar img { width: 96px; height: 96px; margin-bottom: 0; }
+    nav.site-nav { padding: 0 1.2em; }
+    h1 { font-size: 1.55em; }
+}
